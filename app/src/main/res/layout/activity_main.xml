@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BDBDBD"
-    android:orientation="horizontal"
     tools:context="com.example.daryl.shinigamifanapp.MainActivity">
 
 
@@ -18,7 +17,8 @@
             android:id="@+id/rbc2"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
             android:src="@drawable/rbc2" />
 
 
@@ -26,80 +26,86 @@
             style="@style/AppTheme"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
+            android:layout_weight="1"
             android:padding="28dp"
             android:text="Welcome User:"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="12sp" />
 
         <TextView
             style="@style/AppTheme"
             android:layout_width="143dp"
             android:layout_height="80dp"
+            android:layout_weight="1"
             android:padding="20dp"
-            android:text="User Shiki Points:" />
+            android:text="User Shiki Points:"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/row1"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="86dp"
-        android:layout_alignParentStart="false"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="80dp"
-        android:paddingLeft="70dp">
+        android:background="@color/colorPrimaryDark">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="82dp">
 
         <ImageView
             android:id="@+id/twitch_icon"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
             android:scaleType="fitCenter"
             android:src="@drawable/twitch_icon" />
 
-
         <ImageView
-            android:id="@+id/discord_icon"
             android:layout_width="80dp"
-            android:layout_height="65dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="15dp"
-            android:onClick="run"
-            android:layout_toEndOf="@+id/twitch_icon"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:scaleType="fitCenter"
             android:src="@drawable/discord_icon" />
 
         <ImageView
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@+id/discord_icon"
-            android:scaleType="fitCenter"
-            android:src="@drawable/twitter_icon" />
-
-        <ImageView
-            android:id="@+id/status_online"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/twitch_icon"
-            android:layout_toStartOf="@+id/textView"
-            android:src="@drawable/status_online" />
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitter_icon"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/twitch_icon"
-            android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@+id/discord_icon"
-            android:gravity="bottom"
-            android:text="Twitch" />
+            android:text="Twitch"
+            android:layout_weight="1"
+            android:layout_marginLeft="90dp"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
-
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="bottom"
+        android:text="Copyright 2018 Daryl Tatton. All Rights Reserved." />
 
 </RelativeLayout>
 
