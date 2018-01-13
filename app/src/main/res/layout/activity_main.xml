@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BDBDBD"
+    android:background="#C0C0C0"
     tools:context="com.example.daryl.shinigamifanapp.MainActivity">
 
 
@@ -19,7 +19,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/rbc2" />
+            android:src="@drawable/rbc2_icon118" />
 
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_width="143dp"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:padding="20dp"
+            android:padding="28dp"
             android:text="User Shiki Points:"
             android:textSize="12sp" />
 
@@ -53,53 +53,147 @@
 
     </View>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="82dp">
+        android:layout_height="110dp"
+        android:layout_marginTop="85dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/twitch_icon"
+            android:layout_marginStart="10dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/status_online"
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/twitch_icon"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/twitch_icon" />
-
-        <ImageView
-            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+
             android:layout_weight="1"
+            android:onClick="twitchLink"
             android:scaleType="fitCenter"
-            android:src="@drawable/discord_icon" />
+            android:src="@drawable/twitch_icon118" />
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/twitter_icon"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="165dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Twitch"
+            android:layout_below="@+id/twitch_icon"
+            android:layout_toEndOf="@+id/imageView"
             android:layout_weight="1"
-            android:layout_marginLeft="90dp"/>
+            android:text="Twitch"
+            android:textColor="@color/colorPrimaryDark" />
 
-    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/discord_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="discordLink"
+            android:scaleType="fitCenter"
+            android:src="@drawable/discord_icon118" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discord_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="Discord"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/twitter_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="twitterLink"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitter_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/twitter_icon"
+            android:layout_below="@+id/twitter_icon"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:text="Twitter"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/linebreak2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/relativeLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimaryDark">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/countdown_icon"
+            android:src="@drawable/coutdown_icon_118"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/countdown_icon"
+            android:layout_below="@+id/countdown_icon"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Countdown" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:id="@+id/blog_Icon"
+            android:src="@drawable/blog_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blog_Icon"
+            android:layout_centerHorizontal="true"
+            android:text="Blog"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
