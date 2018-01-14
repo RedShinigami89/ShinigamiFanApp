@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp">
 
@@ -43,21 +44,12 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="80dp"
-        android:background="@color/colorPrimaryDark">
-
-    </View>
-
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:layout_marginTop="85dp">
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_alignParentStart="true">
 
 
         <ImageView
@@ -145,6 +137,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignBottom="@id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/colorPrimaryDark">
@@ -152,34 +146,34 @@
     </View>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true">
 
         <ImageView
+            android:id="@+id/countdown_icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/countdown_icon"
-            android:src="@drawable/coutdown_icon_118"
-            />
+            android:src="@drawable/coutdown_icon_118" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/countdown_icon"
             android:layout_below="@+id/countdown_icon"
-            android:textColor="@color/colorPrimaryDark"
-            android:text="Countdown" />
+            android:text="Countdown"
+            android:textColor="@color/colorPrimaryDark" />
 
         <ImageView
+            android:id="@+id/blog_Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
-            android:id="@+id/blog_Icon"
             android:src="@drawable/blog_icon118" />
 
         <TextView
@@ -190,7 +184,96 @@
             android:text="Blog"
             android:textColor="@color/colorPrimaryDark" />
 
+        <ImageView
+            android:id="@+id/sub_Icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/sub_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/sub_Icon"
+            android:layout_below="@+id/sub_Icon"
+            android:text="Subscriber"
+            android:textColor="@color/colorPrimaryDark" />
+
     </RelativeLayout>
+
+    <View
+        android:id="@+id/linebreak3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimaryDark">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linebreak3">
+
+        <ImageView
+            android:id="@+id/friends_Icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/twitch_friends_icon_118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/friends_Icon"
+            android:layout_below="@+id/friends_Icon"
+            android:text="Friends Stream"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/donate_Icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="donations"
+            android:src="@drawable/paypal_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/donate_Icon"
+            android:layout_centerHorizontal="true"
+            android:text="Donate"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/contact_Icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/contact_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/contact_Icon"
+            android:layout_below="@+id/contact_Icon"
+            android:layout_marginStart="16dp"
+            android:text="Contact"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/textView"
@@ -200,6 +283,16 @@
         android:layout_alignParentStart="true"
         android:gravity="bottom"
         android:text="Copyright 2018 Daryl Tatton. All Rights Reserved." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/linebreak2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimaryDark">
+
+    </View>
 
 </RelativeLayout>
 

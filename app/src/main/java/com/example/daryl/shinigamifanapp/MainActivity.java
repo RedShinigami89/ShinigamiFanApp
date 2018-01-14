@@ -49,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("https://www.twitch.tv/red_shinigami89"));
         startActivity(intent);
     }
+
+    public void donations(View view){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://streamlabs.com/red_shinigami89"));
+        startActivity(intent);
+    }
 }
 
 
