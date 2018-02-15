@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShinigamiFanApp</string>
+    <string name="WelcomeUser">Bienvenue</string>
+    <string name="ShikiPoints">points du shiki</string>
+    <string name="Twitch">Twitch</string>
+    <string name="Countdown">compte à rebours</string>
+    <string name="Subscriber">" le partisan"</string>
+    <string name="Donate">" donner"</string>
+</resources>

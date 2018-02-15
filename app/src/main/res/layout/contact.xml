@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/rbc2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/rbc2_icon118" />
+
+
+        <TextView
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:padding="28dp"
+            android:text="@string/WelcomeUser"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/AppTheme"
+            android:layout_width="143dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="25dp"
+            android:text="@string/ShikiPoints"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/discord_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:onClick="discordLink"
+            android:scaleType="fitCenter"
+            android:src="@drawable/discord_icon118" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/discord_icon"
+            android:layout_below="@+id/discord_icon"
+            android:layout_marginEnd="13dp"
+            android:layout_weight="1"
+            android:text="@string/Discord"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/twitter_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="twitterLink"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitter_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/twitter_icon"
+            android:layout_below="@+id/twitter_icon"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:text="@string/Twitter"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+        <ImageView
+            android:id="@+id/email_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:onClick="email"
+            android:src="@drawable/email_icon118" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="@string/Email"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
