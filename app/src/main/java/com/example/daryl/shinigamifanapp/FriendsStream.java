@@ -3,10 +3,12 @@ package com.example.daryl.shinigamifanapp;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -31,37 +33,48 @@ public class FriendsStream extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friends);
-
-
-        WebView webview = findViewById(R.id.testwebview1);
-        webview.setWebViewClient(new WebViewClient());
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.setBackgroundColor(0);
-        webview.loadUrl("http://stream.kappamon.com/98c23803-2306-4989-8c1d-804d06e133d9");
-
-        WebView bitBoss = findViewById(R.id.bitBoss);
-        bitBoss.setWebViewClient(new WebViewClient());
-        bitBoss.getSettings().setJavaScriptEnabled(true);
-        bitBoss.setBackgroundColor(0);
-        bitBoss.loadUrl("https://streamlabs.com/widgets/streamboss?token=8AA2128A41E20E07");
-
     }
 
-    public class myWebClient extends WebViewClient {
+    public void discordLinkRed(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://discord.gg/Svt5nTh"));
+        startActivity(intent);
+    }
 
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            super.onPageStarted(view, url, favicon);
-        }
+    public void twitchLinkRed(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.twitch.tv/red_shinigami89"));
+        startActivity(intent);
+    }
+
+    public void twitterLinkRed(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.twitter.com/red_shinigami89"));
+        startActivity(intent);
     }
 
 
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        // TODO Auto-generated method stub
-
-        view.loadUrl(url);
-        return true;
-
+    public void twitterLinkAldren(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.twitter.com/aldren84"));
+        startActivity(intent);
     }
 
+    public void discordLinkAldren(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://discord.gg/ssqTuM6"));
+        startActivity(intent);
+    }
 }
+
+

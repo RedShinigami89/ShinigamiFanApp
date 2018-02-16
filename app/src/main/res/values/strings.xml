@@ -2,8 +2,8 @@
     <string name="app_name">ShinigamiFanApp</string>
     <color name="app_color">#000000</color>
 
-    <string name="WelcomeUser">Welcome:</string>
-    <string name="ShikiPoints">Shiki Points -</string>
+    <string name="WelcomeUser">Welcome: Alpha Tester</string>
+    <string name="ShikiPoints">Shiki Points - "Null"</string>
     <string name="Twitch">Twitch</string>
     <string name="Discord" translatable="false">Discord</string>
     <string name="Twitter" translatable="false">Twitter</string>
@@ -22,4 +22,7 @@
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_friends">Friends Stream</string>
     <string name="title_activity_subscriber">Subscriber</string>
+    <string name="Aldren">Aldren</string>
+    <string name="Status">Status -</string>
+    <string name="RedShini">Red_Shinigami89</string>
 </resources>

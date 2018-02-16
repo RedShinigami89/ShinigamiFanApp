@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:padding="28dp"
+            android:padding="26dp"
             android:text="@string/WelcomeUser"
             android:textColor="@color/colorAccent"
             android:textSize="12sp" />
@@ -37,7 +37,7 @@
             android:layout_width="143dp"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:padding="28dp"
+            android:padding="26dp"
             android:text="@string/ShikiPoints"
             android:textColor="@color/colorAccent"
             android:textSize="12sp" />
@@ -52,93 +52,167 @@
         android:background="@color/colorAccent">
 
     </View>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/LineHeader"
-    android:id="@+id/scrollView1">
 
-
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/red_shinigamiheader"
-        >
-
-
-        <ImageView
-            android:id="@+id/rbc22"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/rbc2_icon118" />
-
-        <TextView
-            android:id="@+id/red_shinigami"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/rbc22"
-            android:text="Red_Shinigami89"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/red_shinigami"
-            android:layout_toEndOf="@+id/rbc22"
-            android:text="Status - "
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <View
-            android:id="@+id/sidedivide"
-            android:layout_width="2dp"
-            android:layout_height="80dp"
-            android:layout_margin="5dp"
-            android:layout_toEndOf="@id/red_shinigami"
-            android:background="@color/colorAccent" />
-
-        <TextView
-            android:id="@+id/twitch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/sidedivide"
-            android:text="Twitch"
-            android:textColor="@color/colorAccent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/twitch1"
-            android:layout_toEndOf="@id/sidedivide"
-            android:text="@string/Discord"
-            android:textColor="@color/colorAccent" />
-    </RelativeLayout>
-</ScrollView>
-
-    <WebView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/testwebview1"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/scrollView1"
+        android:layout_below="@id/LineHeader">
 
-        >
-    </WebView>
 
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/testwebview1"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/bitBoss">
-    </WebView>
+        <RelativeLayout
+            android:id="@+id/red_shinigamiheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/rbc22"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/rbc2_icon118" />
+
+            <TextView
+                android:id="@+id/red_shinigami"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/rbc22"
+                android:text="@string/RedShini"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Status-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/red_shinigami"
+                android:layout_toEndOf="@+id/rbc22"
+                android:text="@string/Status"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/sidedivide"
+                android:layout_width="2dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@id/red_shinigami"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/twitch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/sidedivide"
+                android:text="@string/Twitch"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:onClick="twitchLinkRed"/>
+
+            <TextView
+                android:id="@+id/discordLink1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twitch1"
+                android:layout_toEndOf="@id/sidedivide"
+                android:text="@string/Discord"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:onClick="discordLinkRed"/>
+
+            <TextView
+                android:id="@+id/twitterLink1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="twitterLinkRed"
+                android:layout_below="@id/discordLink1"
+                android:layout_toEndOf="@id/sidedivide"
+                android:text="@string/Twitter"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/aldrenimg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@id/rbc22"
+                android:padding="10dp"
+                android:src="@drawable/aldren_image" />
+
+            <TextView
+                android:id="@+id/aldren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Status-"
+                android:layout_marginTop="21dp"
+                android:layout_toEndOf="@id/aldrenimg"
+                android:text="@string/Aldren"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aldren"
+                android:layout_toEndOf="@id/aldrenimg"
+                android:text="@string/Status"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/sidedivide2"
+                android:layout_width="2dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="103dp"
+                android:layout_toEndOf="@id/aldren"
+                android:layout_below="@id/sidedivide"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/twitchLink2"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twitterLink1"
+                android:layout_toEndOf="@id/sidedivide"
+                android:text="@string/Twitch"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:onClick="twitchLinkAldren"/>
+
+            <TextView
+                android:id="@+id/discordLink2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twitchLink2"
+                android:layout_toEndOf="@id/sidedivide"
+                android:text="@string/Discord"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:onClick="discordLinkAldren"/>
+
+            <TextView
+                android:id="@+id/twitterLink2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discordLink2"
+                android:layout_toEndOf="@id/sidedivide"
+                android:text="@string/Twitter"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:onClick="twitterLinkAldren"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 
 
 </RelativeLayout>
