@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.daryl.shinigamifanapp">
+    package="com.dtatton89.daryl.shinigamifanapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.dtatton89.daryl.shinigamifanapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,15 +21,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Contact"
-            android:label="@string/title_activity_contact"></activity>
+            android:name="com.dtatton89.daryl.shinigamifanapp.Contact"
+            android:label="@string/title_activity_contact">
+
+        </activity>
         <activity
-            android:name=".FriendsStream"
-            android:label="@string/title_activity_friends"></activity>
+            android:name="com.dtatton89.daryl.shinigamifanapp.FriendsStream"
+            android:label="@string/title_activity_friends">
+
+        </activity>
         <activity
-            android:name=".subscriber"
-            android:label="@string/title_activity_subscriber"></activity>
-        <activity android:name=".Twitch"></activity>
+            android:name="com.dtatton89.daryl.shinigamifanapp.subscriber"
+            android:label="@string/title_activity_subscriber">
+
+        </activity>
+        <activity android:name="com.dtatton89.daryl.shinigamifanapp.Twitch">
+
+        </activity>
+        <activity android:name="com.dtatton89.daryl.shinigamifanapp.TwitchLogin">
+
+        </activity>
     </application>
 
 </manifest>
