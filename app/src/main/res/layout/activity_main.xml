@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/red1">
+
+
+
+
+
+
+
+
+
+
 
 
     <LinearLayout
@@ -27,17 +36,17 @@
                 android:src="@drawable/rbc2_icon118" />
 
             <TextView
-
+                android:id="@+id/welcome"
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="90dp"
                 android:layout_alignBaseline="@+id/textView3"
                 android:layout_alignBottom="@+id/textView3"
                 android:layout_toStartOf="@+id/textView3"
                 android:layout_weight="1"
                 android:padding="25dp"
-                android:text="@string/WelcomeUser"
+                android:text=""
                 android:textColor="@color/colorAccent"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
 
             <TextView
@@ -64,10 +73,18 @@
                 android:onClick="twitchLink"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:scaleType="fitXY"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
                 android:src="@drawable/twitch_icon118" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignStart="@+id/twitch_Icon"
+                android:layout_below="@+id/twitch_Icon"
+                android:src="@drawable/status_online" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,6 +100,7 @@
                 android:id="@+id/discord_Icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:scaleType="fitXY"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
@@ -103,6 +121,7 @@
                 android:id="@+id/twitter_icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:scaleType="fitXY"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
@@ -129,6 +148,12 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true">
+
+            <WebView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/StatusChecker" >
+            </WebView>
 
             <ImageView
                 android:id="@+id/countdown_icon"
@@ -213,14 +238,14 @@
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/paypal_icon118" />
+                android:src="@drawable/spotlight" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/donate_Icon"
                 android:layout_centerHorizontal="true"
-                android:text="@string/Donate"
+                android:text="@string/featuredStreamer"
 
                 android:textColor="@color/colorAccent" />
 
@@ -248,7 +273,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
 

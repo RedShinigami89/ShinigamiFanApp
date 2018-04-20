@@ -1,0 +1,11 @@
+{
+  "client_id": "{wa96tyey0qflbcid8e6jpt45681p2e}",
+  "redirect_uri": "{http://localhost}",
+  "scopes": [
+    "openid",
+    "profile",
+    "offline_access",
+    "user:edit+user:read:email"
+  ],
+  "issuer_uri":"https://dev-639028.oktapreview.com/oauth2/default"
+}

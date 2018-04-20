@@ -29,6 +29,9 @@ android {
     }
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
     productFlavors {
+        android.defaultConfig.manifestPlaceholders = [
+                "appAuthRedirectScheme": "com.oktapreview.dev-639028"
+        ]
     }
 }
 
@@ -36,8 +39,12 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.nimbusds:oauth2-oidc-sdk:5.57'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.android.volley:volley:1.1.0'
+
+
 }

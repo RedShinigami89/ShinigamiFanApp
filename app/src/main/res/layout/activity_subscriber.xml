@@ -194,6 +194,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="288dp"
         android:src="@drawable/cat_cam_con118"
+        android:id="@+id/CatCamera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

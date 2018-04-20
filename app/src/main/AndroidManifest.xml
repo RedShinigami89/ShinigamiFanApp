@@ -3,7 +3,6 @@
     package="com.dtatton89.daryl.shinigamifanapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +12,18 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dtatton89.daryl.shinigamifanapp.MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/mainMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="myapp" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,26 +31,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dtatton89.daryl.shinigamifanapp.Contact"
-            android:label="@string/title_activity_contact">
-
-        </activity>
+            android:name=".Contact"
+            android:label="@string/title_activity_contact"></activity>
         <activity
-            android:name="com.dtatton89.daryl.shinigamifanapp.FriendsStream"
-            android:label="@string/title_activity_friends">
-
-        </activity>
+            android:name=".FriendsStream"
+            android:label="@string/title_activity_friends"></activity>
         <activity
-            android:name="com.dtatton89.daryl.shinigamifanapp.subscriber"
-            android:label="@string/title_activity_subscriber">
-
-        </activity>
-        <activity android:name="com.dtatton89.daryl.shinigamifanapp.Twitch">
-
-        </activity>
-        <activity android:name="com.dtatton89.daryl.shinigamifanapp.TwitchLogin">
-
-        </activity>
+            android:name=".subscriber"
+            android:label="@string/title_activity_subscriber"></activity>
+        <activity
+            android:name=".TwitchLogin"
+            android:label="@string/featuredStreamer"></activity>
+        <activity
+            android:name=".Twitch"
+            android:label="@string/Twitch"></activity>
+        <activity android:name=".catCamera"></activity>
     </application>
 
 </manifest>
