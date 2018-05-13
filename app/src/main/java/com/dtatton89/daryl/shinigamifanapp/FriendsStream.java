@@ -47,6 +47,10 @@ public class FriendsStream extends AppCompatActivity {
         final ImageView KellImage = findViewById(R.id.kellLogo);
         final View BannerTaz = findViewById(R.id.tazBanner);
         final TextView TazOnline = findViewById(R.id.TazOnline);
+        final TextView AldrenOnline = findViewById(R.id.AldrenOnline);
+        final View BannerAldren = findViewById(R.id.AldrenBanner);
+        final TextView KelladornOnline = findViewById(R.id.KelladornOnline);
+        final View BannerKelladorn = findViewById(R.id.KelladornBanner);
 
 
 
@@ -285,7 +289,7 @@ public class FriendsStream extends AppCompatActivity {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("type");
                                 if (bio.equals("live"))
-                                BannerTaz.setBackgroundColor(Color.GREEN);
+                                    BannerTaz.setBackgroundColor(Color.parseColor("#9b00d2"));
                                 TazOnline.append(bio);
                             }
 
@@ -328,12 +332,129 @@ public class FriendsStream extends AppCompatActivity {
 
         };
 
+        url = "https://api.twitch.tv/helix/streams?user_id=64578628";
+
+        // Request a string response from the provided URL.
+        final JsonObjectRequest jsonObjectRequest5 = new JsonObjectRequest
+                (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+
+                            JSONObject jsonObject = response;
+                            JSONArray JA = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA.getJSONObject(i);
+                                String bio = object.getString("type");
+                                if (bio.equals("live"))
+                                    BannerAldren.setBackgroundColor(Color.parseColor("#9b00d2"));
+                                AldrenOnline.append(bio);
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }
+
+
+                        , new Response.ErrorListener()
+
+
+                {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        mTextView.append("Welcome Guest");
+                        Log.e("VOLLEY", "ERROR");
+
+                    }
+                })
+
+
+        {    //this is the part, that adds the header to the request
+
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
+                params.put("content-type", "application/json");
+                return params;
+            }
+
+
+        };
+
+        url = "https://api.twitch.tv/helix/streams?user_id=64578628";
+
+        // Request a string response from the provided URL.
+        final JsonObjectRequest jsonObjectRequest6 = new JsonObjectRequest
+                (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+
+                            JSONObject jsonObject = response;
+                            JSONArray JA = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA.getJSONObject(i);
+                                String bio = object.getString("type");
+                                if (bio.equals("live"))
+                                    BannerKelladorn.setBackgroundColor(Color.parseColor("#9b00d2"));
+                                KelladornOnline.append(bio);
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }
+
+
+                        , new Response.ErrorListener()
+
+
+                {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        mTextView.append("Welcome Guest");
+                        Log.e("VOLLEY", "ERROR");
+
+                    }
+                })
+
+
+        {    //this is the part, that adds the header to the request
+
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
+                params.put("content-type", "application/json");
+                return params;
+            }
+
+
+        };
+
+
 
 // Access the RequestQueue through your singleton class.
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest2);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest3);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest4);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest5);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest6);
 
 
 }

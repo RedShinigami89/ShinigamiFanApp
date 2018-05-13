@@ -29,7 +29,7 @@
             android:background="@color/colorAccent"/>
 
         <ImageView
-            android:id="@+id/Banner"
+            android:id="@+id/AldrenBanner"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#bf212121" />
@@ -49,6 +49,14 @@
             android:padding="8dp"
             android:textColor="@color/colorPrimary"
             android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/AldrenOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="5dp" />
 
         <TextView
             android:layout_width="100dp"
@@ -193,7 +201,7 @@
             android:background="@color/colorAccent"/>
 
         <ImageView
-            android:id="@+id/Banner3"
+            android:id="@+id/KelladornBanner"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#bf212121" />
@@ -205,6 +213,14 @@
             android:paddingLeft="8dp"
             android:paddingTop="40dp"
             />
+
+        <TextView
+            android:id="@+id/KelladornOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="5dp" />
 
         <TextView
             android:id="@+id/info_text3"
