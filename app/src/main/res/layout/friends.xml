@@ -1,220 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/red1">
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/red1"
+    android:id="@+id/FriendsList"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_marginTop="8dp"
+        android:layout_width="375dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="10dp">
 
 
         <ImageView
-            android:id="@+id/rbc2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/rbc2_icon118" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
 
+        <ImageView
+            android:id="@+id/Banner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#bf212121" />
+
+        <ImageView
+            android:id="@+id/AldrenLogo"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingTop="40dp"
+            />
 
         <TextView
-            style="@style/AppTheme"
+            android:id="@+id/info_text"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:padding="26dp"
-            android:text="@string/WelcomeUser"
-            android:textColor="@color/colorAccent"
-            android:textSize="12sp" />
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
 
         <TextView
-            style="@style/AppTheme"
-            android:layout_width="143dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:padding="26dp"
-            android:text="@string/ShikiPoints"
-            android:textColor="@color/colorAccent"
-            android:textSize="12sp" />
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/Aldren"
+            android:id="@+id/AldrenBio"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/AldrenDiscord"
+            android:onClick="discordLinkAldren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Discord"
+            android:layout_gravity="end"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:onClick="twitchLinkAldren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitch"
+            android:layout_gravity="end"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:onClick="twitterLinkAldren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitter"
+            android:layout_gravity="end"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view2"
+        android:layout_marginTop="8dp"
+        android:layout_width="375dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="10dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+
+        <ImageView
+            android:id="@+id/tazBanner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#bf212121" />
+
+        <ImageView
+            android:id="@+id/tazImage"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingTop="40dp"
+             />
+
+        <TextView
+            android:id="@+id/info_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/TazOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/TazBio"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/Taz"
+            android:textSize="13sp" />
+
+        <TextView
+            android:onClick="discordLinkTaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Discord"
+            android:layout_gravity="end"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:onClick="twitchLinkTaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitch"
+            android:layout_gravity="end"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:onClick="twitterLinkTaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitter"
+            android:layout_gravity="end"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view3"
+        android:layout_marginTop="8dp"
+        android:layout_width="375dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="10dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+
+        <ImageView
+            android:id="@+id/Banner3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#bf212121" />
+
+        <ImageView
+            android:id="@+id/kellLogo"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingTop="40dp"
+            />
+
+        <TextView
+            android:id="@+id/info_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/kellBio"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/Kelladorn"
+            android:textSize="13sp" />
+
+        <TextView
+            android:onClick="discordLinkKelladorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Discord"
+            android:layout_gravity="end"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:onClick="twitchLinkKelladorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitch"
+            android:layout_gravity="end"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:onClick="twitterLinkKelladorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitter"
+            android:layout_gravity="end"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="18sp"/>
+
+    </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
-    <View
-        android:id="@+id/LineHeader"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_below="@id/linearLayout"
-        android:layout_margin="5dp"
-        android:background="@color/colorAccent">
-
-    </View>
-
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LineHeader">
-
-
-        <RelativeLayout
-            android:id="@+id/red_shinigamiheader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <ImageView
-                android:id="@+id/rbc22"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:src="@drawable/rbc2_icon118" />
-
-            <TextView
-                android:id="@+id/red_shinigami"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/rbc22"
-                android:text="@string/RedShini"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/Status-"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/red_shinigami"
-                android:layout_toEndOf="@+id/rbc22"
-                android:text="@string/Status"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp" />
-
-            <View
-                android:id="@+id/sidedivide"
-                android:layout_width="2dp"
-                android:layout_height="55dp"
-                android:layout_margin="5dp"
-                android:layout_toEndOf="@id/red_shinigami"
-                android:background="@color/colorAccent" />
-
-            <TextView
-                android:id="@+id/twitch1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/sidedivide"
-                android:text="@string/Twitch"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:onClick="twitchLinkRed"/>
-
-            <TextView
-                android:id="@+id/discordLink1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/twitch1"
-                android:layout_toEndOf="@id/sidedivide"
-                android:text="@string/Discord"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:onClick="discordLinkRed"/>
-
-            <TextView
-                android:id="@+id/twitterLink1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="twitterLinkRed"
-                android:layout_below="@id/discordLink1"
-                android:layout_toEndOf="@id/sidedivide"
-                android:text="@string/Twitter"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/aldrenimg"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_below="@id/rbc22"
-                android:padding="10dp"
-                android:src="@drawable/aldren_image" />
-
-            <TextView
-                android:id="@+id/aldren"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Status-"
-                android:layout_marginTop="21dp"
-                android:layout_toEndOf="@id/aldrenimg"
-                android:text="@string/Aldren"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/aldren"
-                android:layout_toEndOf="@id/aldrenimg"
-                android:text="@string/Status"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp" />
-
-            <View
-                android:id="@+id/sidedivide2"
-                android:layout_width="2dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="103dp"
-                android:layout_toEndOf="@id/aldren"
-                android:layout_below="@id/sidedivide"
-                android:background="@color/colorAccent" />
-
-            <TextView
-                android:id="@+id/twitchLink2"
-                android:layout_marginTop="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/twitterLink1"
-                android:layout_toEndOf="@id/sidedivide"
-                android:text="@string/Twitch"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:onClick="twitchLinkAldren"/>
-
-            <TextView
-                android:id="@+id/discordLink2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/twitchLink2"
-                android:layout_toEndOf="@id/sidedivide"
-                android:text="@string/Discord"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:onClick="discordLinkAldren"/>
-
-            <TextView
-                android:id="@+id/twitterLink2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/discordLink2"
-                android:layout_toEndOf="@id/sidedivide"
-                android:text="@string/Twitter"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:onClick="twitterLinkAldren"/>
-
-        </RelativeLayout>
-
-
-    </ScrollView>
-
-
-</RelativeLayout>
-
+</ScrollView>
 

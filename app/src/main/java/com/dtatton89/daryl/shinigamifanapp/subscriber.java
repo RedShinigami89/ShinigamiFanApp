@@ -25,18 +25,16 @@ public class subscriber extends AppCompatActivity {
                 startActivity(contactIntent);
             }
         });
+
     }
 
-
-            public void ordertshirt(View view) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://discord.gg/Svt5nTh"));
-                startActivity(intent);
-            }
-
-
+    public void ordertshirt(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://discord.gg/Svt5nTh"));
+        startActivity(intent);
+    }
 
 
 }

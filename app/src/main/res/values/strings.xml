@@ -13,4 +13,6 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="featuredStreamer"> Featured Streamers</string>
     <string name="mainMenu">Main Menu</string>
+    <string name="Taz">TazTheTerriblyFluffly</string>
+    <string name="ClientID">wa96tyey0qflbcid8e6jpt45681p2e</string>
 </resources>

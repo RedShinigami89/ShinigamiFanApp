@@ -179,6 +179,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_weight="1"
+                android:onClick="Blog"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/blog_icon118" />
 
