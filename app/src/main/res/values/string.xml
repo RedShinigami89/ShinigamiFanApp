@@ -27,6 +27,8 @@
     <string name="title_activity_friends">Friends Stream</string>
     <string name="title_activity_subscriber">Subscribers</string>
     <string name="Kelladorn">Kelladorn</string>
+    <string name="FeaturedStreamerIntro">This Weeks Featured Streamer!</string>
+    <string name="copyright">Copyright 2018 Red_shinigami89. All Rights Reserved.</string>
 
 
 </resources>

@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -289,7 +291,7 @@ public class FriendsStream extends AppCompatActivity {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("type");
                                 if (bio.equals("live"))
-                                    BannerTaz.setBackgroundColor(Color.parseColor("#9b00d2"));
+                                    BannerTaz.setBackgroundColor(Color.parseColor("#7289da"));
                                 TazOnline.append(bio);
                             }
 
@@ -300,9 +302,7 @@ public class FriendsStream extends AppCompatActivity {
                         }
 
                     }
-
-
-                }
+              }
 
 
                         , new Response.ErrorListener()
@@ -389,7 +389,7 @@ public class FriendsStream extends AppCompatActivity {
 
         };
 
-        url = "https://api.twitch.tv/helix/streams?user_id=64578628";
+        url = "https://api.twitch.tv/helix/streams?user_id=148347511";
 
         // Request a string response from the provided URL.
         final JsonObjectRequest jsonObjectRequest6 = new JsonObjectRequest
@@ -459,29 +459,6 @@ public class FriendsStream extends AppCompatActivity {
 
 }
 
-    public void discordLinkRed(View view) {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://discord.gg/Svt5nTh"));
-        startActivity(intent);
-    }
-
-    public void twitchLinkRed(View view) {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.twitch.tv/red_shinigami89"));
-        startActivity(intent);
-    }
-
-    public void twitterLinkRed(View view) {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.twitter.com/red_shinigami89"));
-        startActivity(intent);
-    }
 
 
     public void twitterLinkAldren(View view) {
@@ -554,6 +531,45 @@ public class FriendsStream extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         intent.setData(Uri.parse("https://www.twitch.tv/kelladorn"));
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //and this to handle actions
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+
+        int id = item.getItemId();
+        if (id == R.id.menu) {
+
+
+
+
+            /* Intent productIntent = new Intent();
+            productIntent.setAction(Intent.ACTION_VIEW);
+            productIntent.setData(Uri.parse("https://id.twitch.tv/oauth2/authorize?response_type=token+id_token&client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=arn:aws:iam::636538204394:oidc-provider/api.twitch.tv/api/&scope=viewing_activity_read openid&state=c3ab8aa609ea11e793ae92361f002671"));
+            startActivity(productIntent);
+            */
+            return true;
+        }if (id == R.id.menu_refresh) {
+
+
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            return true;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
 

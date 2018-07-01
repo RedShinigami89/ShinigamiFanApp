@@ -15,4 +15,10 @@
     <string name="mainMenu">Main Menu</string>
     <string name="Taz">TazTheTerriblyFluffly</string>
     <string name="ClientID">wa96tyey0qflbcid8e6jpt45681p2e</string>
+    <string name="menu_refresh">Screen Refresh</string>
+    <string name="about">About</string>
+    <string name="login">Twitch Login</string>
+    <string name="Coountdown">Countdown</string>
+
+
 </resources>

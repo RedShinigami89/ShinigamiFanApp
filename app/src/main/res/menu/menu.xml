@@ -1,11 +1,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
  <item
-     android:title="@string/mainMenu"
+     android:id="@+id/menu_refresh"
+     android:title="@string/menu_refresh"
+     app:showAsAction="never"
+     android:icon="@drawable/refresh_arrow"/>
+
+ <item
+     android:id="@+id/about"
+     android:title="@string/about"
+     app:showAsAction="never"/>
+
+
+ <item
+     android:title="@string/action_sign_in_short"
      android:id="@+id/menu"
      android:icon="@drawable/ic_group_black_24dp"
      android:orderInCategory="100"
-     app:showAsAction="always" />
-
+     app:showAsAction="never" />
 
 </menu>

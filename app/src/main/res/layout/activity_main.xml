@@ -5,17 +5,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/red1">
 
-
-
-
-
-
-
-
-
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -80,11 +69,13 @@
                 android:src="@drawable/twitch_icon118" />
 
             <ImageView
+                android:id="@+id/statusOnline"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignStart="@+id/twitch_Icon"
                 android:layout_below="@+id/twitch_Icon"
-                android:src="@drawable/status_online" />
+                android:src="@drawable/status_online"
+                android:visibility="gone"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -288,7 +279,7 @@
                 android:baselineAligned="true"
                 android:gravity="bottom"
                 android:textColor="@color/colorAccent"
-                android:text="Copyright 2018 Daryl Tatton. All Rights Reserved." />
+                android:text="@string/copyright" />
         </RelativeLayout>
 
 

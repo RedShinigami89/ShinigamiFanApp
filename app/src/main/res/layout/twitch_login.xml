@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/red2">
+    android:background="@drawable/red1">
 
-   <WebView
-       android:layout_width="350dp"
-       android:layout_height="400dp"
-       android:id="@+id/featuredStreamer"
-       android:layout_margin="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
 
-   </WebView>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/FeaturedStreamerIntro"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:padding="4dp"/>
+        <TextView
+            android:id="@+id/FeaturedStreamer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp"
+            android:padding="4dp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/FeaturedLogo"
+            android:onClick="FeaturedStreamer"
+            android:scaleType="centerCrop"
+            android:layout_margin="4dp"
+            />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/FeaturedBio"
+            android:layout_margin="4dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"/>
+    </LinearLayout>
 
 
 
-</LinearLayout>
+
+
+
+
+
+
+</ScrollView>

@@ -3,9 +3,9 @@
     package="com.dtatton89.daryl.shinigamifanapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
 
     <application
         android:allowBackup="true"
@@ -35,21 +35,34 @@
         </activity>
         <activity
             android:name=".Contact"
-            android:label="@string/title_activity_contact"></activity>
+            android:label="@string/title_activity_contact" />
         <activity
             android:name=".FriendsStream"
-            android:label="@string/title_activity_friends"></activity>
+            android:label="@string/title_activity_friends" />
         <activity
             android:name=".subscriber"
-            android:label="@string/title_activity_subscriber"></activity>
+            android:label="@string/title_activity_subscriber" />
         <activity
             android:name=".TwitchLogin"
-            android:label="@string/featuredStreamer"></activity>
+            android:label="@string/featuredStreamer" />
         <activity
             android:name=".Twitch"
-            android:label="@string/Twitch"></activity>
-        <activity android:name=".catCamera"></activity>
-        <service android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService" android:enabled="true" />
+            android:label="@string/Twitch" />
+        <activity android:name=".catCamera" />
+        <activity
+            android:name=".Test"
+            android:label="test" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <activity android:name=".alternative"
+            android:label="Alternative"/>
+
+
+
+
     </application>
 
 </manifest>

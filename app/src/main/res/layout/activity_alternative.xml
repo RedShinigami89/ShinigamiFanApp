@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alternative">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red1"
+            >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/discordGroup"
+            android:background="@color/discordPrimary"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp"
+                android:background="@color/discordPrimary"
+                android:src="@drawable/discord"
+                android:contentDescription="@string/Discord"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Discord"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="true"
+                android:layout_margin="15dp"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/twitterGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/twitterPrimary"
+                android:orientation="horizontal"
+                android:layout_below="@id/discordGroup">
+
+                <ImageView
+                    android:id="@+id/TwitterImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@color/twitterPrimary"
+                    android:padding="5dp"
+                    android:src="@drawable/twitterwhite"
+                    android:contentDescription="@string/Twitter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:text="@string/Twitter"
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/TwitchGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/twitterGroup"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/twitchPrimary"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/TwitchImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@color/twitchPrimary"
+                        android:padding="5dp"
+                        android:src="@drawable/twitch"
+                        android:contentDescription="@string/Twitch"/>
+
+                    <TextView
+                        android:id="@+id/twitchHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:text="@string/Twitch"
+                        android:textAllCaps="true"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TwitchStatus"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <android.support.v4.view.ViewPager
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/TwitchPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TimerGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/countdownPrimary"
+                android:orientation="horizontal"
+                android:layout_below="@id/TwitchGroup">
+
+                <ImageView
+                    android:id="@+id/TimerImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:padding="5dp"
+                    android:src="@drawable/countdown"
+                    android:contentDescription="@string/Countdown"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:text="@string/Countdown"
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BlogGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/TimerGroup"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/BloggerColor"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:id="@+id/BlogImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@color/BloggerColor"
+                    android:padding="5dp"
+                    android:src="@drawable/if_blogger_317754"
+                    android:contentDescription="@string/Blog"/>
+
+                <TextView
+                    android:id="@+id/BlogHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/Twitch"
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/BlogStatus"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SubscriberGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/countdownPrimary"
+                android:orientation="horizontal"
+                android:layout_below="@id/TwitchGroup">
+
+                <ImageView
+                    android:id="@+id/SubscriberImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:padding="5dp"
+                    android:src="@drawable/countdown"
+                    android:contentDescription="@string/Countdown"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:text="@string/Countdown"
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
