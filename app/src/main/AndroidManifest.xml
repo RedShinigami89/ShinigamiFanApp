@@ -57,12 +57,14 @@
             android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
             android:enabled="true" />
 
-        <activity android:name=".alternative"
-            android:label="Alternative"/>
+        <activity
+            android:name=".alternative"
+            android:label="Alternative" />
+        <activity
+            android:name=".Taz_FAQs"
+            android:label="Frequently Asked Questions">
 
-
-
-
+        </activity>
     </application>
 
 </manifest>
