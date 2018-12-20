@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-      /*  ImageView Test = findViewById(R.id.countdown_icon);
+        ImageView Test = findViewById(R.id.countdown_icon);
         Test.setOnClickListener(new View.OnClickListener()
 
         {
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(contactIntent);
             }
         });
-*/
+
 
     }
 

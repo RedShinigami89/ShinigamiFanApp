@@ -149,4 +149,8 @@ public class alternative extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void login(View view) {
+
+    }
 }
