@@ -4,6 +4,7 @@ package com.dtatton89.daryl.shinigamifanapp;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ImageView RedStatus = findViewById(R.id.statusOnline);
+
+        final FloatingActionButton fab2 = findViewById(R.id.fab);
         RequestQueue queue = Volley.newRequestQueue(this);
 
         String url = "https://api.twitch.tv/helix/streams?user_id=48683189";
@@ -53,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("type");
                                 if (bio.equals("live")) {
-                                    RedStatus.setVisibility(View.VISIBLE);
+
+                                    fab2.setVisibility(View.VISIBLE);
                                 } else {
-                                    RedStatus.setVisibility(View.GONE);
+
 
                                 }
                             }
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        RedStatus.setVisibility(View.GONE);
+
                         Log.e("VOLLEY", "ERROR");
 
                     }
@@ -100,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         // Access the RequestQueue through your singleton class.
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest7);
 
-        ImageView contact = findViewById(R.id.contact_Icon);
+      /*  ImageView contact = findViewById(R.id.contact_Icon);
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(contactIntent);
             }
         });
+        */
 
 
         ImageView friends = findViewById(R.id.friends_Icon);
@@ -132,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        ImageView twitch = findViewById(R.id.twitch_Icon);
+       /* ImageView twitch = findViewById(R.id.twitch_Icon);
         twitch.setOnClickListener(new View.OnClickListener()
 
         {
@@ -142,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(contactIntent);
             }
         });
+        */
 
 
         ImageView donate = findViewById(R.id.donate_Icon);
@@ -161,8 +166,21 @@ public class MainActivity extends AppCompatActivity {
         {
             @Override
             public void onClick(View view) {
-                Intent contactIntent = new Intent(MainActivity.this, alternative.class);
+                Intent contactIntent = new Intent(MainActivity.this, VIP.class);
                 startActivity(contactIntent);
+            }
+        });
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.twitch.tv/red_shinigami89"));
+                startActivity(intent);
+
             }
         });
 
@@ -253,14 +271,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void twitchLink(View view) {
+   /* public void redTwitchLink(View view) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         intent.setData(Uri.parse("https://www.twitch.tv/red_shinigami89"));
         startActivity(intent);
     }
-
+*/
 
 
 

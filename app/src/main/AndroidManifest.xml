@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
 
     <application
         android:allowBackup="true"
@@ -52,19 +51,21 @@
         <activity
             android:name=".Test"
             android:label="test" />
-
-        <service
-            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
-            android:enabled="true" />
-
         <activity
             android:name=".alternative"
             android:label="Alternative" />
         <activity
             android:name=".Taz_FAQs"
-            android:label="Frequently Asked Questions">
-
-        </activity>
+            android:label="TazTheTerriblyFluffy - Q and A" />
+        <activity
+            android:name=".Kell_faqs"
+            android:label="KelldornNA - Q and A" />
+        <activity
+            android:name=".Brocky_QA"
+            android:label="BrockyBoy Q and A" />
+        <activity
+            android:name=".VIP"
+            android:label="VIP Personnel" />
     </application>
 
 </manifest>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red1"
+    tools:context=".VIP">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view4"
+            android:layout_width="375dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            card_view:cardCornerRadius="10dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/EletariBanner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bf212121" />
+
+            <ImageView
+                android:id="@+id/EletariLogo"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="40dp" />
+
+            <TextView
+                android:id="@+id/EletariName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/EletariOnline"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/stream_live"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/EletariBio"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="DarkEletari"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/BrockyDiscord"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:src="@color/discordPrimary"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/BrockyLogoDiscord"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/discord" />
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:onClick="twitchLink"
+                android:src="@color/twitchPrimary" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitch" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:onClick="EletaritwitterLink"
+                android:src="@color/twitterPrimary" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitterwhite" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/EletariQA"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/q_a" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/KennyCard"
+            android:layout_width="375dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            card_view:cardCornerRadius="10dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/KennyBanner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bf212121" />
+
+            <ImageView
+                android:id="@+id/KennyLogo"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="40dp" />
+
+            <TextView
+                android:id="@+id/KennyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/KennyOnline"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/stream_live"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/KennyBio"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="KennyStatt's"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/KennyDiscord"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:src="@color/discordPrimary"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/KennyLogoDiscord"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/discord" />
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:onClick="kennytwitchLink"
+                android:src="@color/twitchPrimary" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitch" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:onClick="KennytwitterLink"
+                android:src="@color/twitterPrimary" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitterwhite" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/KennyQA"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/q_a" />
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

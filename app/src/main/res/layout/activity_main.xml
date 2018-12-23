@@ -2,12 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
     android:background="@drawable/red1">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context="com.dtatton89.daryl.shinigamifanapp.MainActivity">
 
@@ -17,39 +18,14 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:layout_marginStart="16dp"
                 android:id="@+id/rbc2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/RedLogo"
                 android:scaleType="centerInside"
                 android:src="@drawable/rbc2_icon118" />
-
-            <TextView
-                android:id="@+id/welcome"
-                android:layout_width="wrap_content"
-                android:layout_height="90dp"
-                android:layout_alignBaseline="@+id/textView3"
-                android:layout_alignBottom="@+id/textView3"
-                android:layout_toStartOf="@+id/textView3"
-                android:layout_weight="1"
-                android:padding="25dp"
-                android:text=""
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp" />
-
-
-            <TextView
-                android:id="@+id/textView3"
-                style="@style/AppTheme"
-                android:layout_width="143dp"
-                android:layout_height="80dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_weight="1"
-                android:padding="25dp"
-                android:text="@string/ShikiPoints"
-                android:textColor="@color/colorAccent"
-                android:textSize="12sp" />
 
         </RelativeLayout>
 
@@ -57,44 +33,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/twitch_Icon"
-                android:onClick="twitchLink"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="fitXY"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_weight="1"
-                android:src="@drawable/twitch_icon118" />
 
             <ImageView
-                android:id="@+id/statusOnline"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignStart="@+id/twitch_Icon"
-                android:layout_below="@+id/twitch_Icon"
-                android:src="@drawable/status_online"
-                android:visibility="gone"/>
+                android:id="@+id/friends_Icon"
+                android:layout_marginStart="16dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/Friend"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/twitch_friends_icon_118" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/twitch_Icon"
-                android:layout_below="@+id/twitch_Icon"
+                android:layout_below="@+id/friends_Icon"
+                android:layout_alignStart="@+id/friends_Icon"
                 android:layout_marginBottom="20dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/Twitch"
+                android:text="@string/Friends"
                 android:textColor="@color/colorAccent" />
 
+
             <ImageView
+                android:contentDescription="@string/DiscordLogo"
                 android:id="@+id/discord_Icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:scaleType="fitXY"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:layout_weight="1"
                 android:onClick="discordLink"
                 android:src="@drawable/discord_icon118" />
 
@@ -104,19 +70,19 @@
                 android:layout_alignEnd="@+id/discord_Icon"
                 android:layout_below="@+id/discord_Icon"
                 android:layout_marginBottom="20dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/Discord"
                 android:textColor="@color/colorAccent" />
 
             <ImageView
+                android:layout_alignParentEnd="true"
                 android:id="@+id/twitter_icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:scaleType="fitXY"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/twitterLogo"
                 android:layout_marginTop="16dp"
-                android:layout_weight="1"
                 android:onClick="twitterLink"
                 android:src="@drawable/twitter_icon118" />
 
@@ -126,7 +92,7 @@
                 android:layout_alignEnd="@+id/twitter_icon"
                 android:layout_below="@+id/twitter_icon"
                 android:layout_marginBottom="20dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/Twitter"
                 android:textColor="@color/colorAccent" />
 
@@ -136,22 +102,22 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true">
+            android:layout_height="match_parent">
 
             <WebView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/StatusChecker" >
+                android:id="@+id/StatusChecker"
+                android:layout_width="1dp"
+                android:layout_height="1dp">
+
             </WebView>
 
             <ImageView
                 android:id="@+id/countdown_icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/Countdown"
                 android:src="@drawable/coutdown_icon_118" />
 
             <TextView
@@ -164,12 +130,12 @@
                 android:textColor="@color/colorAccent" />
 
             <ImageView
+                android:contentDescription="@string/Blog"
                 android:id="@+id/blog_Icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_weight="1"
                 android:onClick="Blog"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/blog_icon118" />
@@ -183,12 +149,13 @@
                 android:textColor="@color/colorAccent" />
 
             <ImageView
+                android:layout_marginEnd="16dp"
                 android:id="@+id/sub_Icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginRight="16dp"
+                android:contentDescription="@string/Subscriber"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/sub_icon118" />
 
@@ -207,24 +174,9 @@
             android:layout_height="match_parent">
 
 
-            <ImageView
-                android:id="@+id/friends_Icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/twitch_friends_icon_118" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/friends_Icon"
-                android:layout_below="@+id/friends_Icon"
-                android:layout_marginBottom="20dp"
-                android:text="@string/Friends"
-                android:textColor="@color/colorAccent" />
 
             <ImageView
+                android:contentDescription="@string/featuredStreamer"
                 android:id="@+id/donate_Icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -241,46 +193,24 @@
 
                 android:textColor="@color/colorAccent" />
 
-            <ImageView
-                android:id="@+id/contact_Icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
-                android:onClick="contactPage"
-                android:src="@drawable/contact_icon118" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/contact_Icon"
-                android:layout_below="@+id/contact_Icon"
-                android:layout_marginStart="16dp"
-                android:text="@string/Contact"
-                android:textColor="@color/colorAccent" />
 
         </RelativeLayout>
 
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="64dp"
-                android:baselineAligned="true"
-                android:gravity="bottom"
-                android:textColor="@color/colorAccent"
-                android:text="@string/copyright" />
-        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="17dp"
+            android:contentDescription="@string/Twitch"
+            android:src="@drawable/twitch_alpha_24"
+            android:tooltipText="Red's Channel"
+            android:visibility="invisible"
+            app:backgroundTint="@color/twitchPrimary"
+            app:elevation="@dimen/fab_margin"
+            app:fabSize="auto"
+            app:rippleColor="@color/colorPrimary" />
 
 
     </LinearLayout>
