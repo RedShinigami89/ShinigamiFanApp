@@ -42,6 +42,11 @@ public class VIP extends AppCompatActivity {
         final TextView kennyBio = findViewById(R.id.KennyBio);
         final ImageView kennyImage = findViewById(R.id.KennyLogo);
         final ImageView kennyLive = findViewById(R.id.KennyOnline);
+        final View DivanBanner = findViewById(R.id.DivanBanner);
+        final TextView divanname = findViewById(R.id.DivanName);
+        final TextView divanBio = findViewById(R.id.DivanBio);
+        final ImageView divanImage = findViewById(R.id.DivanLogo);
+        final ImageView divanLive = findViewById(R.id.DivanOnline);
 
         String url = "https://api.twitch.tv/helix/streams?user_id=156573242";
 
@@ -305,12 +310,150 @@ public class VIP extends AppCompatActivity {
 
         };
 
+         url = "https://api.twitch.tv/helix/streams?user_id=39640362";
+
+        // Request a string response from the provided URL.
+        final JsonObjectRequest DivanRequest = new JsonObjectRequest
+                (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+
+                            JSONObject jsonObject = response;
+                            JSONArray JA = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA.getJSONObject(i);
+                                String bio = object.getString("type");
+                                if (bio.equals("live")) {
+                                    DivanBanner.setBackgroundColor(Color.parseColor("#ff0000"));
+                                    divanLive.setVisibility(View.VISIBLE);
+                                } else {
+
+
+                                }
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }
+
+
+                        , new Response.ErrorListener()
+
+
+                {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        Log.e("VOLLEY", "ERROR");
+
+                    }
+                })
+
+
+        {    //this is the part, that adds the header to the request
+
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
+                params.put("content-type", "application/json");
+                return params;
+            }
+
+
+        };
+
+        url = "https://api.twitch.tv/helix/users?login=divan49";
+
+
+        // Request a string response from the provided URL.
+        final JsonObjectRequest DivanRequest2 = new JsonObjectRequest
+                (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+
+                            JSONObject jsonObject = response;
+                            JSONArray JA = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA.getJSONObject(i);
+                                String bio = object.getString("description");
+                                if (bio != null) {
+                                    divanBio.append("'s Bio - \n" + bio);
+                                } else {
+                                    divanBio.append("'s Bio - Not Available");
+                                }
+                            }
+
+                            JSONObject jsonObject2 = response;
+                            JSONArray JA2 = jsonObject2.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA2.getJSONObject(i);
+                                String name = object.getString("display_name");
+                                divanname.append(name);
+                            }
+
+                            JSONObject jsonObject3 = response;
+                            JSONArray JA3 = jsonObject3.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA3.getJSONObject(i);
+                                String Image = object.getString("profile_image_url");
+                                new DownLoadImageTask(divanImage).execute(Image);
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }
+
+
+                        , new Response.ErrorListener()
+
+
+                {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        eleBio.append("Welcome Guest");
+                        Log.e("VOLLEY", "ERROR");
+
+                    }
+                })
+
+        {    //this is the part, that adds the header to the request
+
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
+                params.put("content-type", "application/json");
+                return params;
+            }
+
+
+        };
+
+
 
         // Access the RequestQueue through your singleton class.
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest1);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest2);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest3);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest4);
+        MySingleton.getInstance(this).addToRequestQueue(DivanRequest);
+        MySingleton.getInstance(this).addToRequestQueue(DivanRequest2);
 
     }
 
@@ -342,11 +485,19 @@ public class VIP extends AppCompatActivity {
 
     }
 
-    public void KennytwitterLink(View view) {
+    public void divanTwitch(View view){
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.twitter.com/kennystatss"));
+        intent.setData(Uri.parse("https://www.twitch.tv/divan49"));
+        startActivity(intent);
+    }
+
+    public void DivantwitterLink(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.twitter.com/divan49"));
         startActivity(intent);
     }
 }
