@@ -95,6 +95,7 @@
 
 
             <View
+                android:id="@+id/twitchAldren"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end"
@@ -228,15 +229,16 @@
 
 
             <View
+
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_gravity="end"
             android:layout_marginTop="80dp"
-            android:onClick="twitchLinkAldren"
                 android:background="@color/twitchPrimary" />
 
 
         <ImageView
+            android:id="@+id/AldrenTwitch"
             android:contentDescription="@string/Twitch"
             android:layout_width="40dp"
             android:layout_height="40dp"

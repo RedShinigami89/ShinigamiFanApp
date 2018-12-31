@@ -35,6 +35,7 @@ public class FriendsStream extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friends);
 
+
         final TextView mTextView = findViewById(R.id.AldrenBio);
         final TextView mTextView2 = findViewById(R.id.info_text);
         final TextView mTextView3 = findViewById(R.id.TazBio);
@@ -727,6 +728,15 @@ public class FriendsStream extends AppCompatActivity {
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest11);
 
 
+        ImageView friends = findViewById(R.id.AldrenTwitch);
+        friends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent contactIntent = new Intent(FriendsStream.this, aldren_twitch.class);
+                startActivity(contactIntent);
+            }
+        });
+
         ImageView TAZ = findViewById(R.id.TazFAQ);
         TAZ.setOnClickListener(new View.OnClickListener()
 
@@ -759,6 +769,17 @@ public class FriendsStream extends AppCompatActivity {
         });
 
 
+        View twitch = findViewById(R.id.twitchAldren);
+        twitch.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick(View view) {
+                Intent contactIntent = new Intent(FriendsStream.this, subscriber.class);
+                startActivity(contactIntent);
+            }
+        });
+
 
 
     }
@@ -782,12 +803,13 @@ public class FriendsStream extends AppCompatActivity {
     }
 
     public void twitchLinkAldren(View view) {
-        Intent intent = new Intent();
+   /*     Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         intent.setData(Uri.parse("https://www.twitch.tv/aldren"));
-        startActivity(intent);
+        startActivity(intent);*/
     }
+
 
     public void twitterLinkTaz(View view) {
         Intent intent = new Intent();

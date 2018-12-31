@@ -385,10 +385,11 @@ public class VIP extends AppCompatActivity {
                             for (int i = 0; i < response.length(); i++) {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("description");
-                                if (bio != null) {
-                                    divanBio.append("'s Bio - \n" + bio);
-                                } else {
+                                if (bio == " ") {
                                     divanBio.append("'s Bio - Not Available");
+                                } else {
+
+                                    divanBio.append("'s Bio - \n" + bio);
                                 }
                             }
 
@@ -454,6 +455,7 @@ public class VIP extends AppCompatActivity {
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest4);
         MySingleton.getInstance(this).addToRequestQueue(DivanRequest);
         MySingleton.getInstance(this).addToRequestQueue(DivanRequest2);
+
 
     }
 

@@ -66,6 +66,7 @@
         <activity
             android:name=".VIP"
             android:label="VIP Personnel" />
+        <activity android:name=".aldren_twitch"></activity>
     </application>
 
 </manifest>
