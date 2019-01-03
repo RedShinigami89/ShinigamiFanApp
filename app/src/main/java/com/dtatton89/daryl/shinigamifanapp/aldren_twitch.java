@@ -67,8 +67,12 @@ public class aldren_twitch extends AppCompatActivity {
                             for (int i = 1; i < response.length(); i++) {
                                 JSONObject object = JA3.getJSONObject(i);
                                 String video = object.getString("embed_url");
-                                //   String html = "<iframe width=\"375\" height=\"225\" style=\"border: 1px solid #cccccc;\" src=" + video + "></iframe>";
-                                String html = "<iframe frameborder= \"1\" scrolling = \"no\" id =\"aldren\" src=\"https://www.twitch.tv/embed/aldren/chat\" height = \"500\" width=\"700\"><iframe>";
+
+
+
+
+                                String html = "<iframe width=\"375\" height=\"225\" style=\"border: 1px solid #cccccc;\" src=\"https://player.tv/?channel=aldren\"></iframe>";
+                               // String html = "<iframe frameborder= \"1\" scrolling = \"yes\" id =\"aldren\" src=\"https://www.twitch.tv/embed/aldren/chat\" height = \"300\" width=\"780\"><iframe>";
                                 aldrenVideo.setWebChromeClient(new WebChromeClient());
                                 aldrenVideo.getSettings().setJavaScriptEnabled(true);
                                 aldrenVideo.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
@@ -77,6 +81,7 @@ public class aldren_twitch extends AppCompatActivity {
                                 aldrenVideo.getSettings().setMediaPlaybackRequiresUserGesture(false);
                                 aldrenVideo.setWebChromeClient(new WebChromeClient());
                                 aldrenVideo.loadData(html, "text/html", null);
+
 
 
                             }

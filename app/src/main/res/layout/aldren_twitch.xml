@@ -6,14 +6,15 @@
     android:orientation="vertical"
     tools:context=".aldren_twitch">
 
-
     <WebView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/AldrenVideo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
 
-        />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
 
     <TextView
         android:id="@+id/AldrenTitle"
@@ -28,13 +29,11 @@
         android:id="@+id/AldrenTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/AldrenVideo"
-        android:layout_alignEnd="@id/AldrenVideo"
         android:layout_marginEnd="28dp"
         android:gravity="end"
         android:text="Views:  "
         android:textColor="@color/colorAccent" />
-
+</RelativeLayout>
 
     <ImageView
         android:id="@+id/AldrenClip"

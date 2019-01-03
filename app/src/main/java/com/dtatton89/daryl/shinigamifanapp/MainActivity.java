@@ -82,23 +82,90 @@ public class MainActivity extends AppCompatActivity {
         int id2 = item.getItemId();
         if (id2 == R.id.menu) {
 
-
-            /*Intent intent = new Intent();
+/*
+            Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.addCategory(Intent.CATEGORY_BROWSABLE);
             intent.setData(Uri.parse("https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&response_type=token&scope=user:edit+user:read:email"));
             startActivity(intent);
-            Log.v("Authorization:","Error");
+            Log.v("Authorization:","Error");*/
 
 
-            WebView login =  new WebView(this);
+           /* WebView login =  new WebView(this);
             login.setWebViewClient(new WebViewClient());
             login.getSettings().setJavaScriptEnabled(true);
             login.setBackgroundColor(0);
-            login.loadUrl("javascript:var nameHash = location.hash;");
-            */
+            login.loadUrl("javascript:var nameHash = location.hash;");*/
+
+
+
+            String url = "https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&response_type=token&scope=user:read:email&state=fivetest101";
+
+            // Request a string response from the provided URL.
+            final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+                    (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            try {
+
+                                JSONObject jsonObject = response;
+                                JSONArray JA = jsonObject.getJSONArray("data");
+                                for (int i = 0; i < response.length(); i++) {
+                                    JSONObject object = JA.getJSONObject(i);
+                                    String bio = object.getString("type");
+
+
+
+
+
+                                    }
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+
+
+                    }
+
+
+                            , new Response.ErrorListener()
+
+
+                    {
+
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                            Log.e("VOLLEY", "ERROR");
+
+                        }
+                    })
+
+
+            {    //this is the part, that adds the header to the request
+
+                @Override
+                public Map<String, String> getHeaders() {
+                    Map<String, String> params = new HashMap<String, String>();
+                   // params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
+                    params.put("content-type", "application/json");
+
+                    return params;
+                }
+
+
+            };
+
+            MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
+
 
         }
+
+
+
 
 
         return super.onOptionsItemSelected(item);
