@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
     final String CHANNEL_ID = "redAlert";
     NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.twitterwhite)
-            .setContentTitle("My notification")
-            .setContentText("Much longer text that cannot fit one line...")
+            .setContentTitle("Red_Shinigami89 Is Live")
+            .setContentText("Join Me! Restiance is Futile!")
             .setStyle(new NotificationCompat.BigTextStyle()
-                    .bigText("Much longer text that cannot fit one line..."))
+                    .bigText("Red_shinigami89 Has Gone live, Resitance Is Futile"))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
 
@@ -160,11 +160,12 @@ public class MainActivity extends AppCompatActivity {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("type");
                                 if (bio.equals("live")) {
-
+                                    createNotificationChannel();
                                     fab2.setVisibility(View.VISIBLE);
 
 
                                 } else {
+                                    createNotificationChannel();
 
 
                                 }

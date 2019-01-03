@@ -3,42 +3,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/red1"
     android:orientation="vertical"
     tools:context=".aldren_twitch">
 
-    <RelativeLayout
+
+    <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/AldrenVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp">
 
-        <ImageView
-            android:id="@+id/AldrenVideo"
-            android:layout_width="325dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_margin="16dp" />
+        />
 
-        <TextView
-            android:id="@+id/AldrenTitle"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/AldrenVideo"
-            android:text="Title Goes Here"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/AldrenTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Title Goes Here"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/AldrenTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/AldrenVideo"
-            android:layout_alignEnd="@id/AldrenVideo"
-            android:layout_marginEnd="16dp"
-            android:gravity="end"
-            android:text="Views:  "
-            android:textColor="@color/colorAccent" />
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/AldrenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AldrenVideo"
+        android:layout_alignEnd="@id/AldrenVideo"
+        android:layout_marginEnd="28dp"
+        android:gravity="end"
+        android:text="Views:  "
+        android:textColor="@color/colorAccent" />
+
+
+    <ImageView
+        android:id="@+id/AldrenClip"
+        android:layout_width="143dp"
+        android:layout_height="95dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp" />
+
+    <TextView
+        android:id="@+id/AldrenClipTitle"
+        android:layout_width="144dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/AldrenClip"
+        android:layout_alignParentStart="true"
+        android:text="Title Goes Here"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/AldrenClipVIews"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_below="@+id/AldrenClipTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:gravity="end"
+        android:text="Views:  "
+        android:textColor="@color/colorAccent" />
+
+
+    <ImageView
+        android:id="@+id/Aldren2Clip"
+        android:layout_width="143dp"
+        android:layout_height="95dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/AldrenClip2Title"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Aldren2Clip"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:text="Title Goes Here"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/AldrenClip2VIews"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@+id/AldrenClip2Title"
+        android:layout_alignParentStart="true"
+        android:gravity="end"
+        android:text="Views:  "
+        android:textColor="@color/colorAccent" />
+
 
 </LinearLayout>
