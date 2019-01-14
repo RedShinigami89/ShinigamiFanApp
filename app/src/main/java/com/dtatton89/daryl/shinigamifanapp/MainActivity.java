@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             intent.addCategory(Intent.CATEGORY_BROWSABLE);
             intent.setData(Uri.parse("https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&response_type=token&scope=user:edit+user:read:email"));
             startActivity(intent);
-            Log.v("Authorization:","Error");*/
+            Log.v("Authorization:","Error");
 
 
            /* WebView login =  new WebView(this);
@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
             login.getSettings().setJavaScriptEnabled(true);
             login.setBackgroundColor(0);
             login.loadUrl("javascript:var nameHash = location.hash;");*/
+/*
 
 
-
-            String url = "https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&response_type=token&scope=user:read:email&state=fivetest101";
+            String url = "https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&response_type=token&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&scope=user:read:email&state=fivetest101";
 
             // Request a string response from the provided URL.
             final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
             MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
 
-
+*/
         }
 
 
@@ -377,7 +377,6 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
 
 
 

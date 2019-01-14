@@ -52,4 +52,11 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.wu-man:android-oauth-client:0.4.5'
     implementation "com.android.support:support-compat:27.1.1"
+    implementation 'net.openid:appauth:0.7.1'
+
+}
+repositories {
+    maven {
+        url "https://dl.bintray.com/openid/net.openid"
+    }
 }

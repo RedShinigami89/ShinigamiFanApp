@@ -66,7 +66,11 @@
         <activity
             android:name=".VIP"
             android:label="VIP Personnel" />
-        <activity android:name=".aldren_twitch"></activity>
+        <activity android:name=".aldren_twitch" />
+        <activity android:name=".red_clip" />
+        <activity android:name=".RedTwitch" />
+        <activity android:name=".TazTwitch" />
+        <activity android:name=".BrockTwitch"></activity>
     </application>
 
 </manifest>

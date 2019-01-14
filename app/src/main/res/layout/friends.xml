@@ -5,39 +5,34 @@
     android:background="@drawable/red1"
     android:id="@+id/FriendsList"
     android:orientation="vertical"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent">
 
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal">
+        android:orientation="vertical">
     <!-- A CardView that contains a TextView -->
 
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view5"
             android:layout_width="375dp"
-            android:layout_height="200dp"
+            android:layout_height="240dp"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             card_view:cardCornerRadius="10dp">
 
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorAccent" />
-
-            <ImageView
+            <View
                 android:id="@+id/redBanner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="#bf212121" />
 
             <ImageView
+                android:contentDescription="@string/RedLogo"
                 android:id="@+id/redLogo"
                 android:layout_width="135dp"
                 android:layout_height="match_parent"
@@ -68,7 +63,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
                 android:text="@string/RedShini"
                 android:textSize="13sp" />
@@ -95,7 +90,7 @@
 
 
             <View
-                android:id="@+id/twitchAldren"
+                android:id="@+id/redTwitch"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end"
@@ -147,6 +142,22 @@
                 android:contentDescription="@string/Q_A"
                 android:src="@drawable/q_a" />
 
+            <View
+                android:id="@+id/redclip"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:background="@color/colorClip" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/clip" />
+
 
         </android.support.v7.widget.CardView>
 
@@ -155,17 +166,12 @@
         android:id="@+id/card_view"
         android:layout_marginTop="8dp"
         android:layout_width="375dp"
-        android:layout_height="200dp"
+            android:layout_height="240dp"
         android:layout_gravity="center"
         card_view:cardCornerRadius="10dp">
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent" />
-
-        <ImageView
+            <ImageView
             android:id="@+id/AldrenBanner"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -281,146 +287,168 @@
             android:layout_marginEnd="30dp"
             android:src="@drawable/q_a" />
 
+            <View
+                android:id="@+id/aldrenClip"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:background="@color/colorClip" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/clip" />
+
 
     </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view2"
-        android:layout_marginTop="8dp"
-        android:layout_width="375dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        card_view:cardCornerRadius="10dp">
 
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"/>
-
-        <ImageView
-            android:id="@+id/tazBanner"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#bf212121" />
-
-        <ImageView
-            android:id="@+id/tazImage"
-            android:layout_width="135dp"
-            android:layout_height="match_parent"
-            android:paddingLeft="8dp"
-            android:paddingTop="40dp"
-             />
-
-        <TextView
-            android:id="@+id/info_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textColor="@color/colorAccent"
-            android:textSize="25sp" />
-
-        <ImageView
-            android:id="@+id/TazOnline"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/stream_live"
-            android:visibility="invisible" />
-
-        <TextView
-            android:id="@+id/TazBio"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            android:layout_width="375dp"
+            android:layout_height="240dp"
             android:layout_gravity="center"
-            android:layout_marginStart="25dp"
-            android:text="@string/Taz"
-            android:textSize="13sp" />
-
-        <ImageView
-            android:onClick="discordLinkTaz"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="40dp"
-            android:src="@color/discordPrimary" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/discord" />
+            android:layout_marginTop="8dp"
+            card_view:cardCornerRadius="10dp">
 
 
-        <ImageView
-            android:onClick="twitchLinkTaz"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="80dp"
-            android:src="@color/twitchPrimary" />
+            <ImageView
+                android:id="@+id/tazBanner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bf212121" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="80dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/twitch" />
+            <ImageView
+                android:id="@+id/tazImage"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="40dp" />
+
+            <TextView
+                android:id="@+id/info_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/TazOnline"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/stream_live"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/TazBio"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:text="@string/Taz"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:background="@color/discordPrimary"
+                android:onClick="discordLinkTaz" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/discord" />
 
 
-        <ImageView
-            android:onClick="twitterLinkTaz"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="120dp"
-            android:src="@color/twitterPrimary" />
+            <View
+                android:id="@+id/TazTwitch"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:background="@color/twitchPrimary" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="120dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/twitterwhite" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitch" />
 
-        <ImageView
-            android:id="@+id/TazFAQ"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="160dp"
-            android:src="@color/colorPrimary" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="160dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/q_a" />
+            <View
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:background="@color/twitterPrimary"
+                android:onClick="twitterLinkTaz" />
 
-    </android.support.v7.widget.CardView>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitterwhite" />
+
+            <ImageView
+                android:id="@+id/TazFAQ"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:src="@color/colorPrimary" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/q_a" />
+
+            <View
+                android:id="@+id/TazClip"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:background="@color/colorClip" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/clip" />
+
+        </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view3"
         android:layout_marginTop="8dp"
         android:layout_width="375dp"
-        android:layout_height="200dp"
+        android:layout_height="240dp"
         android:layout_gravity="center"
         card_view:cardCornerRadius="10dp">
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"/>
-
-        <ImageView
+        <View
             android:id="@+id/KelladornBanner"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -433,6 +461,14 @@
             android:paddingLeft="8dp"
             android:paddingTop="40dp"
             />
+
+        <TextView
+            android:id="@+id/kellTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="16dp"
+            android:text="Time HERE" />
 
         <ImageView
             android:id="@+id/KelladornOnline"
@@ -525,21 +561,33 @@
             android:layout_marginTop="160dp"
             android:layout_marginEnd="30dp"
             android:src="@drawable/q_a" />
+
+        <View
+            android:id="@+id/KellClip"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="200dp"
+            android:background="@color/colorClip" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/clip" />
     </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view4"
             android:layout_width="375dp"
-            android:layout_height="200dp"
+            android:layout_height="240dp"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             card_view:cardCornerRadius="10dp">
 
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/BrockyBanner"
@@ -610,13 +658,14 @@
                 android:src="@color/twitchPrimary" />
 
 
-            <ImageView
+            <View
+                android:id="@+id/BrockTwitch"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end"
                 android:layout_marginTop="80dp"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/twitch" />
+                android:background="@drawable/twitch" />
 
             <ImageView
                 android:layout_width="100dp"
@@ -651,8 +700,164 @@
                 android:layout_marginEnd="30dp"
                 android:src="@drawable/q_a" />
 
+            <View
+                android:id="@+id/BrockClip"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:background="@color/colorClip" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/clip" />
+
 
         </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view6"
+            android:layout_width="375dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            card_view:cardCornerRadius="10dp">
+
+
+            <ImageView
+                android:id="@+id/CrashBanner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bf212121" />
+
+            <ImageView
+                android:id="@+id/CrashLogo"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:id="@+id/info_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/CrashOnline"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/stream_live"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/CrashBio"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/crash"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/CrashDiscord"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:onClick="discordLinkCrash"
+                android:src="@color/discordPrimary"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/CrashLogoDiscord"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/discord" />
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:onClick="twitchLinkCrash"
+                android:src="@color/twitchPrimary" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitch" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:onClick="twitterLinkCrash"
+                android:src="@color/twitterPrimary" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/twitterwhite" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/CrashQA"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/Q_A"
+                android:src="@drawable/q_a" />
+
+            <View
+                android:id="@+id/CrashClip"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:background="@color/colorClip" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/clip" />
+
+        </android.support.v7.widget.CardView>
+
 
     </LinearLayout>
 

@@ -8,4 +8,5 @@
     <color name="twitchPrimary">#6441a5</color>
     <color name="countdownPrimary">#dd1e47</color>
     <color name="BloggerColor">#f05222</color>
+    <color name="colorClip">#000000</color>
 </resources>
