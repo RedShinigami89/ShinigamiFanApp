@@ -34,25 +34,6 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
 
-    final String CHANNEL_ID = "redAlert";
-    NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.twitterwhite)
-            .setContentTitle("Red_Shinigami89 Is Live")
-            .setContentText("Join Me! Restiance is Futile!")
-            .setStyle(new NotificationCompat.BigTextStyle()
-                    .bigText("Red_shinigami89 Has Gone live, Resitance Is Futile"))
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-
-    public void Blog(View view) {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://dtatton89.wixsite.com/reds-room"));
-        startActivity(intent);
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -165,9 +146,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
-
         return super.onOptionsItemSelected(item);
 
     }
@@ -200,6 +178,15 @@ public class MainActivity extends AppCompatActivity {
     }
 */
 
+    final String CHANNEL_ID = "redAlert";
+    NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+            .setSmallIcon(R.drawable.twitterwhite)
+            .setContentTitle("Red_Shinigami89 Is Live")
+            .setContentText("Join Me! Restiance is Futile!")
+            .setStyle(new NotificationCompat.BigTextStyle()
+                    .bigText("Red_shinigami89 Has Gone live, Resitance Is Futile"))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -231,8 +218,8 @@ public class MainActivity extends AppCompatActivity {
                                     fab2.setVisibility(View.VISIBLE);
 
 
+
                                 } else {
-                                    createNotificationChannel();
 
 
                                 }
@@ -362,6 +349,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void Blog(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://dtatton89.wixsite.com/reds-room"));
+        startActivity(intent);
+    }
+
+
     private void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
@@ -377,10 +373,8 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
-
-
 }
+
 
 
 

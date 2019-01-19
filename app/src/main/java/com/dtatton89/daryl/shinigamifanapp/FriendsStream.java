@@ -84,8 +84,8 @@ public class FriendsStream extends AppCompatActivity {
                 public void onResponse(JSONObject response) {
                     try {
 
-                        JSONObject jsonObject = response;
-                        JSONArray JA = jsonObject.getJSONArray("data");
+                        JSONObject AldrenBio = response;
+                        JSONArray JA = AldrenBio.getJSONArray("data");
                         for (int i = 0; i < response.length(); i++) {
                             JSONObject object = JA.getJSONObject(i);
                             String bio = object.getString("description");
@@ -721,11 +721,64 @@ public class FriendsStream extends AppCompatActivity {
 
 
         };
+
+
+        url = "https://api.twitch.tv/helix/streams?user_id=87760104";
+
+        // Request a string response from the provided URL.
+        final JsonObjectRequest jsonObjectRequest12 = new JsonObjectRequest
+                (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+
+                            JSONObject jsonObject = response;
+                            JSONArray JA = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA.getJSONObject(i);
+                                String bio = object.getString("type");
+                                if (bio.equals("live"))
+                                    CrashBanner.setBackgroundColor(Color.parseColor("#ff0000"));
+                                CrashOnline.setVisibility(View.VISIBLE);
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }
+
+
+                        , new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        redBio.append("Welcome Guest");
+                        Log.e("VOLLEY", "ERROR");
+
+                    }
+                }) {    //this is the part, that adds the header to the request
+
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
+                params.put("content-type", "application/json");
+                return params;
+            }
+
+
+        };
+
         url = "https://api.twitch.tv/helix/users?login=CrashKoeck";
 
 
         // Request a string response from the provided URL.
-        final JsonObjectRequest jsonObjectRequest12 = new JsonObjectRequest
+        final JsonObjectRequest jsonObjectRequest13 = new JsonObjectRequest
                 (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -766,10 +819,7 @@ public class FriendsStream extends AppCompatActivity {
                 }
 
 
-                        , new Response.ErrorListener()
-
-
-                {
+                        , new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -777,10 +827,7 @@ public class FriendsStream extends AppCompatActivity {
                         Log.e("VOLLEY", "ERROR");
 
                     }
-                })
-
-
-        {    //this is the part, that adds the header to the request
+                }) {    //this is the part, that adds the header to the request
 
             @Override
             public Map<String, String> getHeaders() {
@@ -807,6 +854,7 @@ public class FriendsStream extends AppCompatActivity {
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest10);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest11);
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest12);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest13);
 
 
         ImageView friends = findViewById(R.id.AldrenTwitch);
