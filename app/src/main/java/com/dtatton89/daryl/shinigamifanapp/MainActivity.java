@@ -1,15 +1,10 @@
 package com.dtatton89.daryl.shinigamifanapp;
 
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -60,95 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        int id2 = item.getItemId();
-        if (id2 == R.id.menu) {
-
-/*
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse("https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&response_type=token&scope=user:edit+user:read:email"));
-            startActivity(intent);
-            Log.v("Authorization:","Error");
-
-
-           /* WebView login =  new WebView(this);
-            login.setWebViewClient(new WebViewClient());
-            login.getSettings().setJavaScriptEnabled(true);
-            login.setBackgroundColor(0);
-            login.loadUrl("javascript:var nameHash = location.hash;");*/
-/*
-
-
-            String url = "https://id.twitch.tv/oauth2/authorize?client_id=wa96tyey0qflbcid8e6jpt45681p2e&response_type=token&redirect_uri=myapp://com.daryl.dtatton89.shinigamifanapp&scope=user:read:email&state=fivetest101";
-
-            // Request a string response from the provided URL.
-            final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
-                    (com.android.volley.Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
-
-                                JSONObject jsonObject = response;
-                                JSONArray JA = jsonObject.getJSONArray("data");
-                                for (int i = 0; i < response.length(); i++) {
-                                    JSONObject object = JA.getJSONObject(i);
-                                    String bio = object.getString("type");
-
-
-
-
-
-                                    }
-
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                        }
-
-
-                    }
-
-
-                            , new Response.ErrorListener()
-
-
-                    {
-
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                            Log.e("VOLLEY", "ERROR");
-
-                        }
-                    })
-
-
-            {    //this is the part, that adds the header to the request
-
-                @Override
-                public Map<String, String> getHeaders() {
-                    Map<String, String> params = new HashMap<String, String>();
-                   // params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
-                    params.put("content-type", "application/json");
-
-                    return params;
-                }
-
-
-            };
-
-            MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
-
-*/
-        }
-
 
         return super.onOptionsItemSelected(item);
 
     }
+
+
+
 
 
     public void discordLink(View view) {
@@ -177,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 */
-
+/*
     final String CHANNEL_ID = "redAlert";
     NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.twitterwhite)
@@ -186,16 +99,16 @@ public class MainActivity extends AppCompatActivity {
             .setStyle(new NotificationCompat.BigTextStyle()
                     .bigText("Red_shinigami89 Has Gone live, Resitance Is Futile"))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         // notificationId is a unique int for each notification that you must define
         notificationManager.notify(12456, mBuilder.build());
-
+*/
         final FloatingActionButton fab2 = findViewById(R.id.fab);
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -214,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("type");
                                 if (bio.equals("live")) {
-                                    createNotificationChannel();
+                                    //createNotificationChannel();
                                     fab2.setVisibility(View.VISIBLE);
 
 
@@ -357,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+/*
     private void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
@@ -373,6 +286,8 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
+    */
+
 }
 
 

@@ -24,28 +24,23 @@
             android:rowCount="1"
             android:useDefaultMargins="true">
             <!-- A CardView that contains a TextView -->
-
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_view5"
                 android:layout_width="375dp"
                 android:layout_height="240dp"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="center"
                 android:layout_marginTop="8dp"
                 card_view:cardCornerRadius="10dp">
 
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
-
-                <ImageView
+                <View
                     android:id="@+id/redBanner"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="#bf212121" />
 
                 <ImageView
+                    android:contentDescription="@string/RedLogo"
                     android:id="@+id/redLogo"
                     android:layout_width="135dp"
                     android:layout_height="match_parent"
@@ -76,7 +71,7 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
                     android:text="@string/RedShini"
                     android:textSize="13sp" />
@@ -103,7 +98,7 @@
 
 
                 <View
-                    android:id="@+id/twitchAldren"
+                    android:id="@+id/redTwitch"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
@@ -161,7 +156,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="200dp"
-                    android:background="@color/colorPrimaryDark" />
+                    android:background="@color/DarkBlue" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -176,17 +171,12 @@
 
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_view"
+                android:layout_marginTop="8dp"
                 android:layout_width="375dp"
                 android:layout_height="240dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dp"
                 card_view:cardCornerRadius="10dp">
 
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
 
                 <ImageView
                     android:id="@+id/AldrenBanner"
@@ -210,23 +200,23 @@
                     android:textSize="25sp" />
 
                 <ImageView
+                    android:contentDescription="@string/online"
                     android:id="@+id/AldrenOnline"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginEnd="30dp"
-                    android:contentDescription="@string/online"
                     android:src="@drawable/stream_live"
                     android:visibility="invisible" />
 
                 <TextView
-                    android:id="@+id/AldrenBio"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="15dp"
                     android:text="@string/Aldren"
+                    android:id="@+id/AldrenBio"
                     android:textSize="13sp" />
 
                 <View
@@ -235,18 +225,18 @@
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="40dp"
-                    android:background="@color/discordPrimary"
                     android:onClick="discordLinkAldren"
+                    android:background="@color/discordPrimary"
                     android:textSize="18sp" />
 
                 <ImageView
+                    android:contentDescription="@string/Discord"
                     android:id="@+id/AldrenLogoDiscord"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="30dp"
-                    android:contentDescription="@string/Discord"
                     android:src="@drawable/discord" />
 
 
@@ -261,12 +251,12 @@
 
                 <ImageView
                     android:id="@+id/AldrenTwitch"
+                    android:contentDescription="@string/Twitch"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="80dp"
                     android:layout_marginEnd="30dp"
-                    android:contentDescription="@string/Twitch"
                     android:src="@drawable/twitch" />
 
                 <View
@@ -279,12 +269,12 @@
 
 
                 <ImageView
+                    android:contentDescription="@string/Twitter"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="120dp"
                     android:layout_marginEnd="30dp"
-                    android:contentDescription="@string/Twitter"
                     android:src="@drawable/twitterwhite" />
 
                 <View
@@ -295,6 +285,146 @@
                     android:background="@color/colorPrimary" />
 
                 <ImageView
+                    android:contentDescription="@string/Q_A"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/q_a" />
+
+                <View
+                    android:id="@+id/aldrenClip"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="200dp"
+                    android:background="@color/DarkBlue" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/clip" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view6"
+                android:layout_width="375dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                card_view:cardCornerRadius="10dp">
+
+
+                <ImageView
+                    android:id="@+id/CrashBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#bf212121" />
+
+                <ImageView
+                    android:id="@+id/CrashLogo"
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
+                    android:paddingStart="8dp"
+                    android:paddingTop="40dp"
+                    android:paddingEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/info_text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/CrashOnline"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/stream_live"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/CrashBio"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/crash"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/CrashDiscord"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="40dp"
+                    android:onClick="discordLinkCrash"
+                    android:src="@color/discordPrimary"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/CrashLogoDiscord"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/discord" />
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="80dp"
+                    android:onClick="twitchLinkCrash"
+                    android:src="@color/twitchPrimary" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/twitch" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="120dp"
+                    android:onClick="twitterLinkCrash"
+                    android:src="@color/twitterPrimary" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/twitterwhite" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="160dp"
+                    android:src="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/CrashQA"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
@@ -304,149 +434,12 @@
                     android:src="@drawable/q_a" />
 
                 <View
-                    android:id="@+id/Aldrenclip"
+                    android:id="@+id/CrashClip"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="200dp"
-                    android:background="@color/colorPrimaryDark" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="200dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/clip" />
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view2"
-                android:layout_width="375dp"
-                android:layout_height="240dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                card_view:cardCornerRadius="10dp">
-
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
-
-                <ImageView
-                    android:id="@+id/tazBanner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="#bf212121" />
-
-                <ImageView
-                    android:id="@+id/tazImage"
-                    android:layout_width="135dp"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="40dp" />
-
-                <TextView
-                    android:id="@+id/info_text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/TazOnline"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/stream_live"
-                    android:visibility="invisible" />
-
-                <TextView
-                    android:id="@+id/TazBio"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="25dp"
-                    android:text="@string/Taz"
-                    android:textSize="13sp" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="40dp"
-                    android:onClick="discordLinkTaz"
-                    android:src="@color/discordPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/discord" />
-
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="80dp"
-                    android:onClick="twitchLinkTaz"
-                    android:src="@color/twitchPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/twitch" />
-
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="120dp"
-                    android:onClick="twitterLinkTaz"
-                    android:src="@color/twitterPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/twitterwhite" />
-
-                <ImageView
-                    android:id="@+id/TazFAQ"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="160dp"
-                    android:src="@color/colorPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="160dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/q_a" />
-
-                <View
-                    android:id="@+id/TazClip"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="200dp"
-                    android:background="@color/colorPrimaryDark" />
+                    android:background="@color/DarkBlue" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -456,142 +449,6 @@
                     android:layout_marginEnd="30dp"
                     android:src="@drawable/clip" />
 
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view3"
-                android:layout_width="375dp"
-                android:layout_height="240dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                card_view:cardCornerRadius="10dp">
-
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
-
-                <ImageView
-                    android:id="@+id/KelladornBanner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="#bf212121" />
-
-                <ImageView
-                    android:id="@+id/kellLogo"
-                    android:layout_width="135dp"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="40dp" />
-
-                <ImageView
-                    android:id="@+id/KelladornOnline"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/stream_live"
-                    android:visibility="invisible" />
-
-                <TextView
-                    android:id="@+id/info_text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="25sp" />
-
-                <TextView
-                    android:id="@+id/kellBio"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginEnd="5dp"
-                    android:text="@string/Kelladorn"
-                    android:textSize="13sp" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="40dp"
-                    android:onClick="discordLinkKelladorn"
-                    android:src="@color/discordPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/discord" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="80dp"
-                    android:onClick="twitchLinkKelladorn"
-                    android:src="@color/twitchPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/twitch" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="120dp"
-                    android:onClick="twitterLinkKelladorn"
-                    android:src="@color/twitterPrimary" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/twitterwhite" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="160dp"
-                    android:onClick="twitterLinkKelladorn"
-                    android:src="@color/colorPrimary" />
-
-                <ImageView
-                    android:id="@+id/Kell_QA"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="160dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/q_a" />
-
-                <View
-                    android:id="@+id/KellClip"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="200dp"
-                    android:background="@color/colorPrimaryDark" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="200dp"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/clip" />
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -603,10 +460,6 @@
                 card_view:cardCornerRadius="10dp">
 
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
 
                 <ImageView
                     android:id="@+id/BrockyBanner"
@@ -677,13 +530,14 @@
                     android:src="@color/twitchPrimary" />
 
 
-                <ImageView
+                <View
+                    android:id="@+id/BrockTwitch"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="80dp"
                     android:layout_marginEnd="30dp"
-                    android:src="@drawable/twitch" />
+                    android:background="@drawable/twitch" />
 
                 <ImageView
                     android:layout_width="100dp"
@@ -724,7 +578,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="200dp"
-                    android:background="@color/colorPrimaryDark" />
+                    android:background="@color/DarkBlue" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -737,8 +591,9 @@
 
             </android.support.v7.widget.CardView>
 
+
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view6"
+                android:id="@+id/card_view2"
                 android:layout_width="375dp"
                 android:layout_height="240dp"
                 android:layout_gravity="center"
@@ -747,26 +602,20 @@
 
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
-
-                <ImageView
-                    android:id="@+id/CrashBanner"
+                    android:id="@+id/tazBanner"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="#bf212121" />
 
                 <ImageView
-                    android:id="@+id/CrashLogo"
+                    android:id="@+id/tazImage"
                     android:layout_width="135dp"
                     android:layout_height="match_parent"
-                    android:paddingStart="8dp"
-                    android:paddingTop="40dp"
-                    android:paddingEnd="8dp" />
+                    android:paddingLeft="8dp"
+                    android:paddingTop="40dp" />
 
                 <TextView
-                    android:id="@+id/info_text5"
+                    android:id="@+id/info_text2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -774,7 +623,7 @@
                     android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/CrashOnline"
+                    android:id="@+id/TazOnline"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
@@ -783,27 +632,23 @@
                     android:visibility="invisible" />
 
                 <TextView
-                    android:id="@+id/CrashBio"
+                    android:id="@+id/TazBio"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/crash"
-                    android:textSize="12sp" />
+                    android:layout_marginStart="25dp"
+                    android:text="@string/Taz"
+                    android:textSize="13sp" />
 
-                <ImageView
-                    android:id="@+id/CrashDiscord"
+                <View
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="40dp"
-                    android:onClick="discordLinkBrocky"
-                    android:src="@color/discordPrimary"
-                    android:textSize="18sp" />
+                    android:background="@color/discordPrimary"
+                    android:onClick="discordLinkTaz" />
 
                 <ImageView
-                    android:id="@+id/CrashLogoDiscord"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
@@ -812,14 +657,153 @@
                     android:src="@drawable/discord" />
 
 
-                <ImageView
+                <View
+                    android:id="@+id/TazTwitch"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="80dp"
-                    android:onClick="twitchLinkBrocky"
-                    android:src="@color/twitchPrimary" />
+                    android:background="@color/twitchPrimary" />
 
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/twitch" />
+
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="120dp"
+                    android:background="@color/twitterPrimary"
+                    android:onClick="twitterLinkTaz" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/twitterwhite" />
+
+                <ImageView
+                    android:id="@+id/TazFAQ"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="160dp"
+                    android:src="@color/colorPrimary" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/q_a" />
+
+                <View
+                    android:id="@+id/TazClip"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="200dp"
+                    android:background="@color/DarkBlue" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/clip" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view3"
+                android:layout_marginTop="8dp"
+                android:layout_width="375dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                card_view:cardCornerRadius="10dp">
+
+
+                <View
+                    android:id="@+id/KelladornBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#bf212121" />
+
+                <ImageView
+                    android:id="@+id/kellLogo"
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="40dp" />
+
+                <TextView
+                    android:id="@+id/kellTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Time HERE" />
+
+                <ImageView
+                    android:id="@+id/KelladornOnline"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/stream_live"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/info_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/kellBio"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/Kelladorn"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_marginTop="40dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:onClick="discordLinkKelladorn"
+                    android:layout_gravity="end"
+                    android:src="@color/discordPrimary" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/discord" />
+
+                <ImageView
+                    android:onClick="twitchLinkKelladorn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="80dp"
+                    android:src="@color/twitchPrimary" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -834,9 +818,8 @@
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="120dp"
-                    android:onClick="twitterLinkBrocky"
+                    android:onClick="twitterLinkKelladorn"
                     android:src="@color/twitterPrimary" />
-
 
                 <ImageView
                     android:layout_width="40dp"
@@ -851,25 +834,25 @@
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="160dp"
+                    android:onClick="twitterLinkKelladorn"
                     android:src="@color/colorPrimary" />
 
                 <ImageView
-                    android:id="@+id/CrashQA"
+                    android:id="@+id/Kell_QA"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="30dp"
-                    android:contentDescription="@string/Q_A"
                     android:src="@drawable/q_a" />
 
                 <View
-                    android:id="@+id/CrashClip"
+                    android:id="@+id/KellClip"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="200dp"
-                    android:background="@color/colorPrimaryDark" />
+                    android:background="@color/DarkBlue" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -878,9 +861,8 @@
                     android:layout_marginTop="200dp"
                     android:layout_marginEnd="30dp"
                     android:src="@drawable/clip" />
-
-
             </android.support.v7.widget.CardView>
+
 
         </GridLayout>
     </HorizontalScrollView>

@@ -155,16 +155,16 @@
                 android:layout_height="80dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:contentDescription="@string/Subscriber"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/sub_icon118" />
+                android:contentDescription="@string/SA"
+                android:src="@drawable/stream_avatars" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignEnd="@+id/sub_Icon"
                 android:layout_below="@+id/sub_Icon"
-                android:text="@string/Subscriber"
+                android:text="@string/SA"
                 android:textColor="@color/colorAccent" />
 
         </RelativeLayout>

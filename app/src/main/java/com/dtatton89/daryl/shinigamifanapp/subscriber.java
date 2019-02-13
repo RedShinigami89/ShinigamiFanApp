@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class subscriber extends AppCompatActivity {
 
@@ -12,6 +14,10 @@ public class subscriber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subscriber);
+        WebView SA = findViewById(R.id.StreamAvatar);
+        SA.getSettings().setJavaScriptEnabled(true);
+        SA.setWebViewClient(new WebViewClient());
+        SA.loadUrl("https://server.streamavatars.com/viewer.html?channel_id=48683189&platform=twitch");
 
 
 
