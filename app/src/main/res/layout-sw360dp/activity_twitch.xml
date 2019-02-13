@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red1">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <WebView
+            android:id="@+id/twitchvid"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp" />
+
+        <WebView
+            android:id="@+id/Chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/twitchvid"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp" />
+
+        <ImageView
+            android:id="@+id/login"
+            android:layout_width="185dp"
+            android:layout_height="106dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/rbc2_128" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
