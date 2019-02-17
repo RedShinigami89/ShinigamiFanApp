@@ -35,13 +35,15 @@ public class alternative extends AppCompatActivity {
         final TextView mTextView = findViewById(R.id.FeaturedStreamer);
         final TextView mTextView2 = findViewById(R.id.FeaturedBio);
         final ImageView mImageView = findViewById(R.id.FeaturedLogo);
-        String aldrenUrl = "https://api.twitch.tv/helix/users?login=Aldren";
-        String TazUrl = "https://api.twitch.tv/helix/users?login=taztheterriblyfluffy";
+        //String aldrenUrl = "https://api.twitch.tv/helix/users?login=Aldren";
+        // String TazUrl = "https://api.twitch.tv/helix/users?login=taztheterriblyfluffy";
+        //final String CrashUrl = ;
 
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = TazUrl;
+        queue.getCache().clear();
+        String url = "https://api.twitch.tv/helix/users?login=CrashKoeck";
 
 
         // Request a string response from the provided URL.
@@ -116,6 +118,7 @@ public class alternative extends AppCompatActivity {
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
 
 
+
     }
 
 
@@ -145,12 +148,9 @@ public class alternative extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.twitch.tv/taztheterriblyfluffy"));
+        intent.setData(Uri.parse("https://www.twitch.tv/crashcoeck"));
         startActivity(intent);
 
     }
 
-    public void login(View view) {
-
-    }
 }
