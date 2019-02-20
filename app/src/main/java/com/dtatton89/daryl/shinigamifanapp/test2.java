@@ -25,12 +25,12 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwitchLogin extends AppCompatActivity {
+public class test2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.twitch_login);
+        setContentView(R.layout.activity_test2);
 
 
         final TextView mTextView = findViewById(R.id.FeaturedStreamer);
@@ -94,10 +94,7 @@ public class TwitchLogin extends AppCompatActivity {
                 }
 
 
-                        , new Response.ErrorListener()
-
-
-                {
+                        , new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -105,10 +102,7 @@ public class TwitchLogin extends AppCompatActivity {
                         Log.e("VOLLEY", "ERROR");
 
                     }
-                })
-
-
-        {    //this is the part, that adds the header to the request
+                }) {    //this is the part, that adds the header to the request
 
             @Override
             public Map<String, String> getHeaders() {
@@ -122,7 +116,6 @@ public class TwitchLogin extends AppCompatActivity {
         };
 
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
-
 
 
     }

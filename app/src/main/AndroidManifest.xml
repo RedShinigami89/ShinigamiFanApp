@@ -14,6 +14,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".test2"></activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -70,7 +71,7 @@
         <activity android:name=".red_clip" />
         <activity android:name=".RedTwitch" />
         <activity android:name=".TazTwitch" />
-        <activity android:name=".BrockTwitch"></activity>
+        <activity android:name=".BrockTwitch" />
     </application>
 
 </manifest>

@@ -210,7 +210,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
        /* ImageView twitch = findViewById(R.id.twitch_Icon);
         twitch.setOnClickListener(new View.OnClickListener()
 

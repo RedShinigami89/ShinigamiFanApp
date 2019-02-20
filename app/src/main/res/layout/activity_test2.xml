@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/red1"
     android:layout_height="match_parent"
+    android:background="@drawable/red1"
     android:orientation="vertical"
     tools:context=".alternative">
 
@@ -53,11 +53,11 @@
             android:id="@+id/crashWebsite"
             android:layout_width="190dp"
             android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginEnd="0dp"
             android:onClick="CrashSite"
             android:text="32 Kinds of Awesome!"
-            android:layout_gravity="center_horizontal"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
     </LinearLayout>
 
