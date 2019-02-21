@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,10 +36,7 @@ public class TwitchLogin extends AppCompatActivity {
         final TextView mTextView = findViewById(R.id.FeaturedStreamer);
         final TextView mTextView2 = findViewById(R.id.FeaturedBio);
         final ImageView mImageView = findViewById(R.id.FeaturedLogo);
-        final View CrashWebsite = findViewById(R.id.crashWebsite);
-
-
-
+        final Button websiteIcon = findViewById(R.id.crashWebsite);
         String aldrenUrl = "https://api.twitch.tv/helix/users?login=Aldren";
         String TazUrl = "https://api.twitch.tv/helix/users?login=taztheterriblyfluffy";
         final String CrashUrl = "https://api.twitch.tv/helix/users?login=CrashKoeck";
@@ -81,9 +79,8 @@ public class TwitchLogin extends AppCompatActivity {
                                 new DownLoadImageTask(mImageView).execute(Image);
                             }
 
-                            if (url == CrashUrl) {
-                                CrashWebsite.setVisibility(View.VISIBLE);
-                            }
+
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();

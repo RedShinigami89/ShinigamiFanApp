@@ -10,4 +10,6 @@
     <color name="BloggerColor">#f05222</color>
     <color name="colorClip">#000000</color>
     <color name="DarkBlue">#191970</color>
+    <color name="CrashOrange">#E6820A</color>
+    <color name="CrashYellow">#FFDD0A</color>
 </resources>
