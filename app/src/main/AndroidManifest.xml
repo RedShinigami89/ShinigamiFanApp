@@ -53,9 +53,6 @@
             android:name=".Test"
             android:label="test" />
         <activity
-            android:name=".alternative"
-            android:label="Alternative" />
-        <activity
             android:name=".Taz_FAQs"
             android:label="TazTheTerriblyFluffy - Q and A" />
         <activity
@@ -67,6 +64,7 @@
         <activity
             android:name=".VIP"
             android:label="VIP Personnel" />
+
         <activity android:name=".aldren_twitch" />
         <activity android:name=".red_clip" />
         <activity android:name=".RedTwitch" />
