@@ -66,11 +66,32 @@
     <string name="Q9">Who is your inspiration?</string>
     <string name="Q10">What is one message you would give to your fans?</string>
     <string name="Q11">Would you date a fan? </string>
+    <string name="Q12">What is your Favorite Game to play?</string>
+    <string name="Q13">Who is your Celebrity Crush?</string>
+    <string name="Q14">Are you single?</string>
+    <string name="Q15">Do you get used to be a celebrity?</string>
+    <string name="Q16">Do you Speak any other languages.</string>
     <string name="Taz1">My Brother , One Terrible Idea. He suggested me to stream to meet new people and play video games. </string>
     <string name="Taz2">My Cat Bumbles. I Rescued him from the cold after he was hurt and nursed him back to health.   </string>
     <string name="Taz3">Kingdom Hearts, The First one PS1 </string>
+    <string name="CK1">It was kind of an accident, actually. I initially was trying to get my gameplay onto YouTube from my PS4, but at the time the PS4 only recorded up to 15 minutes at a time. But, my PS4 could stream to Twitch then, I streamed to Twitch, then downloaded the VOD to edit and upload to YouTube. After a while, I realized that I liked the live interaction way more than uploading to YouTube.</string>
+    <string name="CK2">My favourite games to play are any game I can find kind of a small "feature" of and make that into the main theme of that stream. (Nutshots in Sniper Elite 4, dead horses in Red Dead Redemption 2, etc) and also games that really allow me to interact with the audience</string>
+    <string name="CK3">Have to say my 2 cats, Milo and Oliver</string>
+    <string name="CK4">Don\'t worry about numbers, expensive gear, or insane custom graphics. First figure out who you are as a streamer. Learn how to have a presence on screen first, then you can figure out graphics and gear to compliment your style of show. After that, then you can push for growth.</string>
+    <string name="CK5">Spare time? What\'s that? LOL. I spend most of my spare time working on upgrading and improving my show. For every hour on cam, I spend at least double that working on improving it.</string>
+    <string name="CK6">Has to be Scarlett Johansson</string>
+    <string name="CK7">I have been happily married since 2010...to the same woman!</string>
+    <string name="CK8">For a broadcaster to get my attention, either be unique or be one of the best at what they do. Another important thing is that it shouldn\'t be the game that makes the stream, it should be the braodcaster</string>
+    <string name="CK9">No, even if I was single</string>
+    <string name="CK10">I don\'t think of myself as even remotely famous, so it\'s weird to me when people I don\'t know come up to me and go "Hey Crash, I'm [insert name here]".</string>
+    <string name="CK11">Markiplier, hands down. He was my inspiration to seriously pursue content creation.</string>
+    <string name="CK12">Just like Dallas Corbin, I speak English and Bad English</string>
+    <string name="CK13">You are the reason I\'m here and the reason I do this. Thank you.</string>
     <string name="crash">CrashKoeck</string>
     <string name="SA">Stream Avatars</string>
+    <string name="Crash32">32 Kinds of Awesome!</string>
+    <string name="CrashDiscord">Discord</string>
+    <string name="VIP">VIP</string>
 
 
 </resources>

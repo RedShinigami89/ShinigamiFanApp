@@ -14,7 +14,8 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".test2"></activity>
+        <activity android:name=".Crash_QA"></activity>
+        <activity android:name=".test2" />
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -64,7 +65,6 @@
         <activity
             android:name=".VIP"
             android:label="VIP Personnel" />
-
         <activity android:name=".aldren_twitch" />
         <activity android:name=".red_clip" />
         <activity android:name=".RedTwitch" />

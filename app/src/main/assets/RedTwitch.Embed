@@ -17,6 +17,8 @@
         channel: "Red_shinigami89",
         layout: "video",
         theme: "dark",
+        allowfullscreen: "true",
+
 
 
 
