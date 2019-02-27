@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,9 +35,11 @@ public class TwitchLogin extends AppCompatActivity {
         final TextView mTextView = findViewById(R.id.FeaturedStreamer);
         final TextView mTextView2 = findViewById(R.id.FeaturedBio);
         final ImageView mImageView = findViewById(R.id.FeaturedLogo);
-        final Button websiteIcon = findViewById(R.id.crashWebsite);
-        String aldrenUrl = "https://api.twitch.tv/helix/users?login=Aldren";
-        String TazUrl = "https://api.twitch.tv/helix/users?login=taztheterriblyfluffy";
+        final View CrashWebsite = findViewById(R.id.crashWebsite);
+
+
+        final String aldrenUrl = "https://api.twitch.tv/helix/users?login=Aldren";
+        final String TazUrl = "https://api.twitch.tv/helix/users?login=taztheterriblyfluffy";
         final String CrashUrl = "https://api.twitch.tv/helix/users?login=CrashKoeck";
 
 
@@ -79,8 +80,9 @@ public class TwitchLogin extends AppCompatActivity {
                                 new DownLoadImageTask(mImageView).execute(Image);
                             }
 
-
-
+                            if (url == CrashUrl) {
+                                CrashWebsite.setVisibility(View.VISIBLE);
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -157,13 +159,22 @@ public class TwitchLogin extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void FeaturedStreamer(View view) {
+    public void CrashTwitter(View view) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.twitch.tv/crashcoeck"));
+        intent.setData(Uri.parse("https://www.twitter.com/crashkoeck"));
         startActivity(intent);
-
     }
+
+    public void CrashDiscord(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://crashkoeck.com/"));
+        startActivity(intent);
+    }
+
+
 
 }

@@ -942,6 +942,15 @@ public class FriendsStream extends AppCompatActivity {
             }
         });
 
+        final View CrashFAQS = findViewById(R.id.CrashQA);
+        CrashFAQS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent contactIntent = new Intent(FriendsStream.this, Crash_QA.class);
+                startActivity(contactIntent);
+            }
+        });
+
 
 
     }

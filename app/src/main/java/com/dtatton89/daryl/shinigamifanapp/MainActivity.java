@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        ImageView subscriber = findViewById(R.id.sub_Icon);
+        ImageView subscriber = findViewById(R.id.StreamAvatar);
         subscriber.setOnClickListener(new View.OnClickListener()
 
         {
