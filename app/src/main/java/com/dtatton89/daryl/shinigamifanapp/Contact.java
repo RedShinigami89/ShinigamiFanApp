@@ -46,6 +46,7 @@ public class Contact extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -61,19 +62,16 @@ public class Contact extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
 
         int id = item.getItemId();
-        if (id == R.id.menu) {
+        if (id == R.id.menu_refresh) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
 
 
-
-
-            /* Intent productIntent = new Intent();
-            productIntent.setAction(Intent.ACTION_VIEW);
-            productIntent.setData(Uri.parse("https://id.twitch.tv/oauth2/authorize?response_type=token+id_token&client_id=wa96tyey0qflbcid8e6jpt45681p2e&redirect_uri=arn:aws:iam::636538204394:oidc-provider/api.twitch.tv/api/&scope=viewing_activity_read openid&state=c3ab8aa609ea11e793ae92361f002671"));
-            startActivity(productIntent);
-            */
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }
