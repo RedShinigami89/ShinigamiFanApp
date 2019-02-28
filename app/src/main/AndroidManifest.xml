@@ -14,6 +14,8 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.actions"/>
 
         <activity android:name=".test2" />
         <activity
@@ -42,7 +44,7 @@
             android:label="@string/title_activity_friends" />
         <activity
             android:name=".subscriber"
-            android:label="Stream Avatar Setting\'s" />
+            android:label="Stream Avatar Setting\&apos;s" />
         <activity
             android:name=".TwitchLogin"
             android:label="@string/featuredStreamer" />
@@ -67,25 +69,28 @@
             android:label="VIP Personnel" />
         <activity
             android:name=".Crash_QA"
-            android:label="@string/CrashQA"/>
+            android:label="@string/CrashQA" />
         <activity
             android:name=".aldren_twitch"
-            android:label="Aldren's Twitch"/>
+            android:label="Aldren&apos;s Twitch" />
         <activity
             android:name=".red_clip"
-            android:label="Red Shinigami89 Clips"/>
+            android:label="Clips" />
         <activity
             android:name=".RedTwitch"
-            android:label="Red_Shinigami89 Twitch Page"/>
+            android:label="Red_Shinigami89 Twitch Page" />
         <activity
             android:name=".TazTwitch"
-            android:label="TazTheTerriblyFluffy Twitch Page"/>
+            android:label="TazTheTerriblyFluffy Twitch Page" />
         <activity
             android:name=".BrockTwitch"
-            android:label="BrockyBoy_ Twitch Page"/>
+            android:label="BrockyBoy_ Twitch Page" />
         <activity
             android:name=".Red_FAQs"
-            android:label="Red Shinigami89 Q&amp;A"/>
+            android:label="Red Shinigami89 Q&amp;A" />
+        <activity
+            android:name=".Aldren_FAQS"
+            android:label="Aldren Q&amp;A" />
     </application>
 
 </manifest>

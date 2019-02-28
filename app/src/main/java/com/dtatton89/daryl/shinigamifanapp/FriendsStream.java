@@ -951,6 +951,68 @@ public class FriendsStream extends AppCompatActivity {
             }
         });
 
+        final View AldrenFAQ = findViewById(R.id.AldrenFAQ);
+        AldrenFAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+                    public void onClick (View view) {
+                Intent contactIntent = new Intent(FriendsStream.this, Aldren_FAQS.class);
+                startActivity(contactIntent);
+            }
+        });
+
+        final View Clip = findViewById(R.id.redclip);
+        Clip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, red_clip.class);
+                startActivity(contactIntent);
+            }
+        });
+
+        final View ClipAldren = findViewById(R.id.aldrenClip);
+        ClipAldren.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, red_clip.class);
+                startActivity(contactIntent);
+            }
+        });
+
+        final View ClipCrash = findViewById(R.id.CrashClip);
+        ClipCrash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, red_clip.class);
+                startActivity(contactIntent);
+            }
+        });
+
+        final View ClipBrock = findViewById(R.id.BrockClip);
+        ClipBrock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, red_clip.class);
+                startActivity(contactIntent);
+            }
+        });
+
+        final View ClipTaz = findViewById(R.id.TazClip);
+        ClipTaz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, red_clip.class);
+                startActivity(contactIntent);
+            }
+        });
+
+        final View Clipkell = findViewById(R.id.KellClip);
+        Clipkell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, red_clip.class);
+                startActivity(contactIntent);
+            }
+        });
 
 
     }

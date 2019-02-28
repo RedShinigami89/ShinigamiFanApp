@@ -71,6 +71,7 @@
     <string name="Q14">Are you single?</string>
     <string name="Q15">Do you get used to be a celebrity?</string>
     <string name="Q16">Do you Speak any other languages.</string>
+    <string name="Q17">Where would you like to visit?</string>
     <string name="Taz1">My Brother , One Terrible Idea. He suggested me to stream to meet new people and play video games. </string>
     <string name="Taz2">My Cat Bumbles. I Rescued him from the cold after he was hurt and nursed him back to health.   </string>
     <string name="Taz3">Kingdom Hearts, The First one PS1 </string>
@@ -91,6 +92,7 @@
     <string name="SA">Stream Avatars</string>
     <string name="Crash32">32 Kinds of Awesome!</string>
     <string name="CrashDiscord">Discord</string>
+    <string name="CrashQA">CrashKoeck Q&amp;A</string>
     <string name="VIP">VIP</string>
     <string name="icon">Icon</string>
     <string name="Al1">I liked the idea of making videos for YouTube originally but am horrible at editing and have no creativity.  Figured, I talk to myself constantly anyways and streaming was a great fit (plus I would sound less crazy this way  ... lol)</string>
@@ -103,4 +105,15 @@
     <string name="Al8">I pull inspiration and encouragement from many different streamers that are a good positive influence.</string>
     <string name="Al9">Japan or go back backing in various countries around Europe</string>
     <string name="A10">Unfortunately, me.. Really should do some cleaning at some point... soon … lol</string>
+    <string name="Red1">I liked the concept of livestreaming 15 seconds of online fame with out the work of editing sign me up!</string>
+    <string name="Red2">Puzzle based games and RPG Game are my favorite. and games like Zelda or Laura croft that combines those</string>
+    <string name="Red3">i like animals but i am mostly a cat person two animals living to gether but neither needing direct interaction outside the basic needs.</string>
+    <string name="Red4">Learn to talk to an empty room, and Go out and Network with other people on social media.</string>
+    <string name="Red5">Free time?? between my full time job, streaming and scratching my ass i already lost 1 hr sleep</string>
+    <string name="Red6">Yes, but i am not looking long given up on that aspect of life so i use that free time to stream!</string>
+    <string name="Red7">no, Not Likely To happen would really need to click</string>
+    <string name="Red8">I get inspiration from aloot of streamers but Aldren and Crash Koeck are the top two for me.</string>
+    <string name="Red9">Germany visted few years ago skipped a lot of places would love to go back</string>
+    <string name="Red10">Me, No ifs and buts or Coconuts</string>
+
 </resources>

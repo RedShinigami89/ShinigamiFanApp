@@ -363,7 +363,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="43dp"
                     android:layout_marginTop="9dp"
-                    android:text="@string/Q13" />
+                    android:text="@string/Q17" />
 
                 <View
                     android:layout_width="match_parent"
@@ -390,7 +390,7 @@
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="0dp"
-                    android:text="@string/CK6" />
+                    android:text="@string/Al9" />
 
             </RelativeLayout>
 
@@ -456,7 +456,7 @@
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="0dp"
-                    android:text="@string/CK9">
+                    android:text="@string/Al7">
 
                 </TextView>
 
@@ -522,7 +522,7 @@
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="0dp"
-                    android:text="@string/CK5" />
+                    android:text="@string/Al5" />
 
             </RelativeLayout>
 
@@ -561,7 +561,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="9dp"
-                    android:text="@string/Q10" />
+                    android:text="@string/Q15" />
 
                 <View
                     android:layout_width="match_parent"

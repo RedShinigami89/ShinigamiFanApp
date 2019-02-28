@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class red_clip extends AppCompatActivity {
 
@@ -12,6 +15,10 @@ public class red_clip extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_red_clip);
+        ImageView comingsoon = findViewById(R.id.RedClip);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.swing);
+        comingsoon.startAnimation(animation);
+
     }
 
     @Override
