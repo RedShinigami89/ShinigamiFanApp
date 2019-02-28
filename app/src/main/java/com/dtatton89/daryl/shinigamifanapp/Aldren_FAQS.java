@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Brocky_QA extends AppCompatActivity {
+public class Aldren_FAQS extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.brocky__qa);
+        setContentView(R.layout.activity_aldren__faqs);
     }
 
 

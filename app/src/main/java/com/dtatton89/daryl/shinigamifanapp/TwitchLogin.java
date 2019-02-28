@@ -143,7 +143,11 @@ public class TwitchLogin extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
 
         int id = item.getItemId();
-        if (id == R.id.menu) {
+        if (id == R.id.menu_refresh) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+
 
             return true;
         }
