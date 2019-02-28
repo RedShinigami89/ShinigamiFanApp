@@ -14,8 +14,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Aldren_FAQS"></activity>
-        <activity android:name=".Crash_QA" />
+
         <activity android:name=".test2" />
         <activity
             android:name=".MainActivity"
@@ -43,7 +42,7 @@
             android:label="@string/title_activity_friends" />
         <activity
             android:name=".subscriber"
-            android:label="@string/title_activity_subscriber" />
+            android:label="Stream Avatar Setting\'s" />
         <activity
             android:name=".TwitchLogin"
             android:label="@string/featuredStreamer" />
@@ -56,21 +55,37 @@
             android:label="test" />
         <activity
             android:name=".Taz_FAQs"
-            android:label="TazTheTerriblyFluffy - Q and A" />
+            android:label="TazTheTerriblyFluffy - Q&amp;A" />
         <activity
             android:name=".Kell_faqs"
-            android:label="KelldornNA - Q and A" />
+            android:label="KelldornNA - Q&amp;A" />
         <activity
             android:name=".Brocky_QA"
-            android:label="BrockyBoy Q and A" />
+            android:label="BrockyBoy Q&amp;A" />
         <activity
             android:name=".VIP"
             android:label="VIP Personnel" />
-        <activity android:name=".aldren_twitch" />
-        <activity android:name=".red_clip" />
-        <activity android:name=".RedTwitch" />
-        <activity android:name=".TazTwitch" />
-        <activity android:name=".BrockTwitch" />
+        <activity
+            android:name=".Crash_QA"
+            android:label="@string/CrashQA"/>
+        <activity
+            android:name=".aldren_twitch"
+            android:label="Aldren's Twitch"/>
+        <activity
+            android:name=".red_clip"
+            android:label="Red Shinigami89 Clips"/>
+        <activity
+            android:name=".RedTwitch"
+            android:label="Red_Shinigami89 Twitch Page"/>
+        <activity
+            android:name=".TazTwitch"
+            android:label="TazTheTerriblyFluffy Twitch Page"/>
+        <activity
+            android:name=".BrockTwitch"
+            android:label="BrockyBoy_ Twitch Page"/>
+        <activity
+            android:name=".Red_FAQs"
+            android:label="Red Shinigami89 Q&amp;A"/>
     </application>
 
 </manifest>
