@@ -561,7 +561,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="9dp"
-                    android:text="@string/Q15" />
+                    android:text="@string/Q6" />
 
                 <View
                     android:layout_width="match_parent"
@@ -586,7 +586,7 @@
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="0dp"
-                    android:text="@string/CK13" />
+                    android:text="@string/A10" />
 
 
             </RelativeLayout>

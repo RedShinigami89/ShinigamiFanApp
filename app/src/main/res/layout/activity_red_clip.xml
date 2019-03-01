@@ -10,6 +10,6 @@
         android:id="@+id/RedClip"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/coming_soon"/>
+        android:src="@drawable/under_construction3" />
 
 </android.support.constraint.ConstraintLayout>

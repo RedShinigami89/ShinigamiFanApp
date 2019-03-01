@@ -1014,6 +1014,15 @@ public class FriendsStream extends AppCompatActivity {
             }
         });
 
+        final View FAQRed = findViewById(R.id.redFaq);
+        FAQRed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(FriendsStream.this, Red_FAQs.class);
+                startActivity(contactIntent);
+            }
+        });
+
 
     }
 

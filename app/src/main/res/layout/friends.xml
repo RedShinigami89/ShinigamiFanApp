@@ -126,6 +126,7 @@
                 android:src="@drawable/twitterwhite" />
 
             <View
+                android:id="@+id/redFaq"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end"
