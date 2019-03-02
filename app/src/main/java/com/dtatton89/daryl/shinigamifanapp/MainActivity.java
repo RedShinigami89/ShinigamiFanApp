@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.android.volley.RequestQueue;
@@ -104,6 +106,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView comingsoon = findViewById(R.id.rbc2);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.swing);
+        comingsoon.startAnimation(animation);
 /*
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         // notificationId is a unique int for each notification that you must define
@@ -129,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
                                 if (bio.equals("live")) {
                                     //createNotificationChannel();
                                     fab2.setVisibility(View.VISIBLE);
-
 
 
                                 } else {
