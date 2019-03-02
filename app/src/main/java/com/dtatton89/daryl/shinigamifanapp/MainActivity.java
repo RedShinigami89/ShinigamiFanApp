@@ -10,8 +10,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.android.volley.RequestQueue;
@@ -107,9 +105,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView comingsoon = findViewById(R.id.rbc2);
+        final ImageView RBC = findViewById(R.id.rbc2);
+
+     /*  ImageView comingsoon = findViewById(R.id.rbc2);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.swing);
         comingsoon.startAnimation(animation);
+        */
 /*
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         // notificationId is a unique int for each notification that you must define
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         final FloatingActionButton fab2 = findViewById(R.id.fab);
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        String url = "https://api.twitch.tv/helix/streams?user_id=48683189";
+        String url = "https://api.twitch.tv/helix/streams?user_login=Red_shinigami89";
 
         // Request a string response from the provided URL.
         final JsonObjectRequest jsonObjectRequest7 = new JsonObjectRequest
@@ -127,8 +128,17 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
 
-                            JSONObject jsonObject = response;
-                            JSONArray JA = jsonObject.getJSONArray("data");
+/*
+                            JSONObject IconObject = response;
+                            JSONArray JA2 = IconObject.getJSONArray("data");
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject object = JA2.getJSONObject(i);
+                                String Image = object.getString("profile_image_url");
+                                new DownLoadImageTask(RBC).execute(Image);
+                            }
+*/
+                            JSONObject liveObject = response;
+                            JSONArray JA = liveObject.getJSONArray("data");
                             for (int i = 0; i < response.length(); i++) {
                                 JSONObject object = JA.getJSONObject(i);
                                 String bio = object.getString("type");
@@ -136,12 +146,9 @@ public class MainActivity extends AppCompatActivity {
                                     //createNotificationChannel();
                                     fab2.setVisibility(View.VISIBLE);
 
-
-                                } else {
-
-
                                 }
                             }
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -171,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public Map<String, String> getHeaders() {
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("Client-ID", "wa96tyey0qflbcid8e6jpt45681p2e");
                 params.put("content-type", "application/json");
                 return params;
@@ -250,8 +257,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //   FloatingActionButton fab = findViewById(R.id.fab);
+        fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();

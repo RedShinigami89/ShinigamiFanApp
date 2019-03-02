@@ -24,8 +24,7 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/RedLogo"
-                android:scaleType="centerInside"
-                android:src="@drawable/rbc2_128" />
+                android:src="@drawable/rbc2_icon118" />
 
         </RelativeLayout>
 
@@ -204,7 +203,6 @@
             android:layout_marginEnd="17dp"
             android:contentDescription="@string/Twitch"
             android:src="@drawable/twitch_alpha_24"
-            android:tooltipText="Red's Channel"
             android:visibility="invisible"
             app:backgroundTint="@color/twitchPrimary"
             app:elevation="@dimen/fab_margin"
