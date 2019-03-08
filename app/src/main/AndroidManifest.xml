@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dtatton89.daryl.shinigamifanapp">
+    package="com.dtatton89.daryl.FanApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.actions"
-            android:resource="@anim/swing" />
+            android:resource="@xml/swing" />
 
         <activity android:name=".test2" />
         <activity
