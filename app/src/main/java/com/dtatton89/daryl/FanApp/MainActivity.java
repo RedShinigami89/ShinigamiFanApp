@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
 
         }
+        if (id == R.id.contact) {
+            Intent contactIntent = new Intent(MainActivity.this, Contact.class);
+            startActivity(contactIntent);
+        }
+
 
 
         return super.onOptionsItemSelected(item);
@@ -104,9 +109,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-/*
-        final ImageView RBC = findViewById(R.id.rbc2);
 
+        final ImageView RBC = findViewById(R.id.rbc2);
+/*
       ImageView comingsoon = findViewById(R.id.rbc2);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.swing);
         comingsoon.startAnimation(animation);
@@ -280,6 +285,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("https://dtatton89.wixsite.com/reds-room"));
         startActivity(intent);
     }
+
 
 /*
     private void createNotificationChannel() {

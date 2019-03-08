@@ -84,8 +84,9 @@
         </LinearLayout>
 
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:columnCount="2"
             android:rowCount="2">
 
@@ -117,7 +118,7 @@
                 android:layout_width="175dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/crash_blend"
                 android:onClick="CrashTwitter"
                 android:text="@string/Twitter" />

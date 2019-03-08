@@ -14,16 +14,12 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/swing" />
-
+        <activity android:name=".contact"></activity>
         <activity android:name=".test2" />
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
